@@ -1,0 +1,17 @@
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/color-palette.scss' as *;
+
+.test__block {
+  background-color: $primary-gray-1;
+  width: 100%;
+  height: 100vh;
+
+}
+
+.test__title {
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  @include typography-h2; //подключение типографии 
+  color: $primary-black-1;
+}
