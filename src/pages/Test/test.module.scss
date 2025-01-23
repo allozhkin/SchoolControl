@@ -5,7 +5,10 @@
   background-color: $primary-gray-1;
   width: 100%;
   height: 100vh;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
 }
 
 .test__title {
@@ -14,4 +17,11 @@
   font-size: 24px;
   @include typography-h2; //подключение типографии 
   color: $primary-black-1;
+  margin-bottom: 50px;
+}
+.test__btn_modal {
+  margin-bottom: 20px;
+}
+.test__icon{
+  margin-bottom: 20px;
 }
