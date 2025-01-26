@@ -1,0 +1,40 @@
+@use "../../styles/color-palette.scss" as *;
+
+@font-face {
+  font-family: "Manrope";
+  src:
+    url("fonts/Manrope-Bold.woff2") format("woff2"),
+    url("fonts/Manrope-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.user-card {
+  max-width: 256px;
+  max-height: 74px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  padding: 13px 26px 13px 72px;
+
+  &_photo {
+    width: 48px;
+    height: 49px;
+    border-radius: 100px;
+    background-color: #f2f4f8;
+    border-image: url(./userIcon.png);
+  }
+  &_name {
+    font-family: "Manrope", sans-serif;
+    font-weight: bold;
+    color: #697077;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
