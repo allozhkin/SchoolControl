@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './test.module.scss';
 import Modal from '../../components/modal/Modal';
 import Icon from '../../components/ui-kit/Icon/Icon'; 
+import SignIn from '../../components/LoginForm/SignIn';
 
 const TestPage: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -27,6 +28,7 @@ const TestPage: React.FC = () => {
         <Icon id="iconStatistic" width={24} height={24} className={styles.test__icon}/>
         <Icon id="iconClose" width={24} height={24} className={styles.test__icon}/>
         <Icon id="iconDone" width={24} height={24} className={styles.test__icon}/>
+        <SignIn />
     </div>
 
   );
