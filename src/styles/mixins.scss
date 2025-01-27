@@ -1,17 +1,17 @@
 @mixin typography($font-family,$font-size, $line-height, $font-weight,$letter-spacing) {
-  font-family: $font-family;
-  font-size: $font-size;
-  line-height: $line-height;
-  font-weight: $font-weight;
-  letter-spacing: $letter-spacing;
-}
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+  }
 
-@mixin typography-h1 {
-  @include typography('Roboto', 42px, 46px, 700, 0.37px)
-}
+  @mixin typography-h1 {
+    @include typography('Roboto', 42px, 46px, 700, 0.37px)
+  }
 
-@mixin typography-h2 {
-  @include typography('Roboto', 28px, 32px, 700, 0.36px)
-}
+    @mixin typography-h2 {
+        @include typography('Roboto', 28px, 32px, 700, 0.36px)
+    }
 
     
