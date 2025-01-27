@@ -6,7 +6,6 @@ import Home from './pages/Home/Home';
 import TestPage from './pages/Test/TestPage';
 
 import './App.scss';
-import SignIn from './components/LoginForm/SignIn';
 
 const App: React.FC = () => (
   <Provider store={store}>
@@ -14,11 +13,9 @@ const App: React.FC = () => (
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/testPage" element={<TestPage />} />
-        <Route path="/login" element={<SignIn />} />
       </Routes>
     </Router>
   </Provider>
-  
 );
 
 export default App;
