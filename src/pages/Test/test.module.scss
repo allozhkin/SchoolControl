@@ -1,27 +1,34 @@
 @use '../../styles/mixins.scss' as *;
 @use '../../styles/color-palette.scss' as *;
 
-.test__block {
-  background-color: $primary-gray-1;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10%;
-}
+.test {
 
-.test__title {
-  margin: 0;
-  text-align: center;
-  font-size: 24px;
-  @include typography-h2; //подключение типографии 
-  color: $primary-black-1;
-  margin-bottom: 50px;
-}
-.test__btn_modal {
-  margin-bottom: 20px;
-}
-.test__icon{
-  margin-bottom: 20px;
+  &__icon {
+    margin-bottom: 20px;
+  }
+
+  &__block {
+    color: $primary-black-1;
+
+    background-color: $primary-gray-1;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    @include typography-h2; //подключение типографии 
+    color: $primary-black-1;
+    margin-bottom: 50px;
+  }
+
+  &__btn_modal {
+    margin-bottom: 20px;
+  }
 }

@@ -7,11 +7,18 @@
   }
 
   @mixin typography-h1 {
-    @include typography('Roboto', 42px, 46px, 700, 0.37px)
+    @include typography('Roboto', 48px, 56px, 600, 0.3px)
+  }
+  
+  @mixin typography-h2 {
+    @include typography('Roboto', 42px, 46px, 700, 0.4px)
+  }
+  
+  @mixin typography-h3 {
+    @include typography('Roboto', 28px, 32px, 700, 0.4px)
   }
 
-    @mixin typography-h2 {
-        @include typography('Roboto', 28px, 32px, 700, 0.36px)
-    }
-
+  @mixin typography-headline-bold {
+    @include typography('Monrope', 20px, 24px, 600, 0.4px)
+  }
     
