@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../RTK/store';
 import { setValue } from '../../RTK/slices/testSlice';
 import styles from './Home.module.scss';
-
+import Icon from '../../components/ui-kit/Icon/Icon';
 
 const Home: React.FC = () => {
   
@@ -18,7 +18,10 @@ const Home: React.FC = () => {
         SliceValueAdd 
 
         </button>
-        
+        <Icon id="iconDone" width={24} height={24} className={styles.test__icon}/>
+        <svg >
+  <use xlinkHref="/public/icons/sprite1.svg#Union"></use>
+</svg>
     </div>
 
   );
