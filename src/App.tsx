@@ -6,7 +6,7 @@ import Home from './pages/Home/Home';
 import TestPage from './pages/Test/TestPage';
 
 import './App.scss';
-import SignIn from './components/LoginForm/SignIn';
+import SignIn from './pages/SignIn/SignIn';
 
 const App: React.FC = () => (
   <Provider store={store}>

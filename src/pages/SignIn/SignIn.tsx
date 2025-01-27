@@ -1,11 +1,10 @@
 import { useForm } from 'react-hook-form';
 import styles from './signin.module.scss';
 
-interface AuthForm {
+type AuthForm = {
   'email': string,
   'password': string,
 }
-
 const SignIn = () => {
   const { register, handleSubmit, formState } = useForm<AuthForm>({
     mode: 'onChange',
