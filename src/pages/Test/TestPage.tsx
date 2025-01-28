@@ -3,9 +3,7 @@ import styles from './test.module.scss';
 import Modal from '../../components/modal/Modal';
 import Icon from '../../components/ui-kit/Icon/Icon';
 import LoginForm from '../../components/loginForm/LoginForm';
-import UserCard from '../../components/ui-kit/userCard/UserCard';
-import Checkboxes from '../../components/ui-kit/checkboxes/Checkboxes';
-import ToggleSwitch from '../../components/ui-kit/toggleSwitch';
+import CalendarComponent from '../../components/Calendar/Calendar';
 
 const TestPage: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -73,7 +71,8 @@ const TestPage: React.FC = () => {
         className={styles.test__icon}
       />
       <LoginForm />
-      <UserCard name="Иван Иваныч" />
+      <CalendarComponent />
+    </div>
 
       <Checkboxes />
       <ToggleSwitch />
