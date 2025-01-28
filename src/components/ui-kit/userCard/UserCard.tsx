@@ -1,17 +1,26 @@
 import React from 'react';
-import 'userCard.module.scss';
+import styles from './userCard.module.scss';
+import Icon from '../Icon/Icon';
 
 interface UserCardProps {
-  imgUrl: string;
+  photo?: string;
   name: string;
-  altText: string;
 }
 
-const UserCard: React.FC<UserCardProps> = ({ imgUrl, name, altText }) => {
+const UserCard: React.FC<UserCardProps> = ({ name, photo }) => {
   return (
-    <div className="user-card">
-      <img className="user-card_photo" src={imgUrl} alt={altText} />
-      <h2 className="user-card_name">{name}</h2>
+    <div className={styles.userCard}>
+      {!photo ? (
+        <Icon
+          id="iconUser"
+          width={24}
+          height={24}
+          className={styles.userCard__icon}
+        />
+      ) : (
+        <img src={photo} alt="user" className={styles.userCard__photo} />
+      )}
+      <h2 className={styles.userCard__name}>{name}</h2>
     </div>
   );
 };

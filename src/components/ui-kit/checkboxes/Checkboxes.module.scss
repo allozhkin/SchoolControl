@@ -1,0 +1,20 @@
+@use "../../../styles/color-palette.scss" as *;
+@use "../../../styles/mixins.scss" as *;
+
+.checkboxField {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 319px;
+    height: 143px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #000;
+
+    background-color: #fff;
+
+}
+.btnField{
+    display: flex;
+    gap: 10px;
+}

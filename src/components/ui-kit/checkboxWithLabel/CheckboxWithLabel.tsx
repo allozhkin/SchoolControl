@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import 'checkboxWithLabel.module.scss';
+import styles from './checkboxWithLabel.module.scss';
 
 interface CheckboxWithLabelProps {
   label: string;
@@ -13,12 +13,13 @@ const CheckboxWithLabel: React.FC<CheckboxWithLabelProps> = ({ label }) => {
   };
 
   return (
-    <label>
-      <input
+    <label className={styles.custom_checkbox}>
+      <input className={styles.checkbox_input}
         type="checkbox"
         checked={isChecked}
         onChange={handleCheckboxChange}
       />
+      <span className={styles.checkbox}></span>
       {label}
     </label>
   );
