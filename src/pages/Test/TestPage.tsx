@@ -3,6 +3,7 @@ import styles from './test.module.scss';
 import Modal from '../../components/modal/Modal';
 import Icon from '../../components/ui-kit/Icon/Icon';
 import LoginForm from '../../components/loginForm/LoginForm';
+import CalendarComponent from '../../components/Calendar/Calendar';
 
 const TestPage: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -38,6 +39,7 @@ const TestPage: React.FC = () => {
       <span>id="Union"</span>
       <Icon id="Union" width={24} height={24} className={styles.test__icon} />
       <LoginForm />
+      <CalendarComponent />
     </div>
 
   );
