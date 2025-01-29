@@ -24,59 +24,6 @@ const TestPage: React.FC = () => {
         <h2>Modal content</h2>
       </Modal>
 
-      <Icon
-        id="iconHelp-circle"
-        width={24}
-        height={24}
-        className={styles.test__icon}
-      />
-      <Icon
-        id="iconCalendar"
-        width={24}
-        height={24}
-        className={styles.test__icon}
-      />
-      <Icon
-        id="iconHome"
-        width={24}
-        height={24}
-        className={styles.test__icon}
-      />
-      <Icon
-        id="iconUser"
-        width={24}
-        height={24}
-        className={styles.test__icon}
-      />
-      <Icon
-        id="iconSettings"
-        width={24}
-        height={24}
-        className={styles.test__icon}
-      />
-      <Icon
-        id="iconStatistic"
-        width={24}
-        height={24}
-        className={styles.test__icon}
-      />
-      <Icon
-        id="iconClose"
-        width={24}
-        height={24}
-        className={styles.test__icon}
-      />
-      <Icon
-        id="iconDone"
-        width={24}
-        height={24}
-        className={styles.test__icon}
-      />
-      <LoginForm />
-      <UserCard name="Иван Иваныч" />
-
-      <Checkboxes />
-      <ToggleSwitch />
       <span>id="iconHelp-circle"</span>
       <Icon
         id="iconHelp-circle"
@@ -135,6 +82,11 @@ const TestPage: React.FC = () => {
       />
       <span>id="Union"</span>
       <Icon id="Union" width={24} height={24} className={styles.test__icon} />
+      <LoginForm />
+      <UserCard name="Иван Иваныч" />
+
+      <Checkboxes />
+      <ToggleSwitch />
     </div>
   );
 };
