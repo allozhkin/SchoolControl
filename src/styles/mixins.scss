@@ -19,6 +19,10 @@
   }
 
   @mixin typography-headline-bold {
-    @include typography('Monrope', 20px, 24px, 600, 0.4px)
+    @include typography('Monrope', 20px, 24px, 400, 0.4px)
+  }
+
+  @mixin typography-navBar-items {
+    @include typography('Monrope', 20px, 22px, 400, 0.4px)
   }
     

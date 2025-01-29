@@ -4,16 +4,22 @@ import { Provider } from 'react-redux';
 import store from './RTK/store';
 import Home from './pages/Home/Home';
 import TestPage from './pages/Test/TestPage';
-
+import NavBar from './components/navBar/NavBar';
 import './App.scss';
 
 const App: React.FC = () => (
   <Provider store={store}>
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/testPage" element={<TestPage />} />
-      </Routes>
+      <header>
+       <NavBar />
+      </header>
+
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/testPage" element={<TestPage />} />
+        </Routes>
+      </main>
     </Router>
   </Provider>
 );
