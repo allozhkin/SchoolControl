@@ -5,21 +5,23 @@ import Icon from '../Icon/Icon';
 interface UserCardProps {
   photo?: string;
   name: string;
+  className?: string;
 }
 
-const UserCard: React.FC<UserCardProps> = ({ name, photo }) => {
+const UserCard: React.FC<UserCardProps> = ({ name, photo, className }) => {
   return (
-    <div className={styles.userCard}>
-      {!photo ? (
+    <div className={`${styles.userCard} ${className}`}>
+     <div className={styles.userCard__img_container}> {!photo ? (
         <Icon
           id="iconUser"
-          width={24}
-          height={24}
+          width={32}
+          height={32}
           className={styles.userCard__icon}
         />
       ) : (
         <img src={photo} alt="user" className={styles.userCard__photo} />
       )}
+      </div>
       <h2 className={styles.userCard__name}>{name}</h2>
     </div>
   );
