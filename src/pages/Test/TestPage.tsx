@@ -77,6 +77,64 @@ const TestPage: React.FC = () => {
 
       <Checkboxes />
       <ToggleSwitch />
+      <span>id="iconHelp-circle"</span>
+      <Icon
+        id="iconHelp-circle"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
+      <span>id="iconCalendar"</span>
+      <Icon
+        id="iconCalendar"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
+      <span>id="iconHome"</span>
+      <Icon
+        id="iconHome"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
+      <span>id="iconUser"</span>
+      <Icon
+        id="iconUser"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
+      <span>id="iconSettings"</span>
+      <Icon
+        id="iconSettings"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
+      <span>id="iconStatistic"</span>
+      <Icon
+        id="iconStatistic"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
+      <span>id="iconClose"</span>
+      <Icon
+        id="iconClose"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
+      <span>id="iconDone"</span>
+      <Icon
+        id="iconDone"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
+      <span>id="Union"</span>
+      <Icon id="Union" width={24} height={24} className={styles.test__icon} />
     </div>
   );
 };
