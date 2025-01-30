@@ -4,6 +4,8 @@ import Modal from '../../components/modal/Modal';
 import Icon from '../../components/ui-kit/Icon/Icon';
 import LoginForm from '../../components/loginForm/LoginForm';
 import CalendarComponent from '../../components/Calendar/Calendar';
+import Checkboxes from '../../components/ui-kit/checkboxes/Checkboxes';
+import ToggleSwitch from '../../components/ui-kit/toggleSwitch/ToggleSwitch';
 
 const TestPage: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -46,7 +48,7 @@ const TestPage: React.FC = () => {
       <Icon id="Exit" width={24} height={24} className={styles.test__icon} />
       <LoginForm />
       <CalendarComponent />
-    </div>
+    
 
       <Checkboxes />
       <ToggleSwitch />
