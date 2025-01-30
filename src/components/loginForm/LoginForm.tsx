@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import styles from './login-form.module.scss';
+import Icon from '../ui-kit/Icon/Icon';
 // import Icon from '../ui-kit/Icon/Icon'; 
 
 interface AuthForm {
@@ -26,6 +27,7 @@ const LoginForm = () => {
           {/* <Icon id="Union" width={48} height={48} /> */}
           <div className={styles.login_container}>
             {/* <h1 className={styles.login__title}>SCHOOL CONTROL</h1> */}
+            <a className={styles.login__logo}><Icon id={'LogoSC'} width={36} height={15} /><span className={styles.login__logo_txt}>SCHOOL CONTROL</span></a>
             <h2 className={styles.login__title}>Вход</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
               <input className={styles.login__input} type="email" placeholder="Логин" {...register (
