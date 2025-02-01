@@ -6,6 +6,7 @@ import LoginForm from '../../components/loginForm/LoginForm';
 import UserCard from '../../components/ui-kit/userCard/UserCard';
 import Checkboxes from '../../components/ui-kit/checkboxes/Checkboxes';
 import ToggleSwitch from '../../components/ui-kit/toggleSwitch';
+import TableMajor from '../../components/tableMajor/TableMajor';
 
 const TestPage: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -87,6 +88,7 @@ const TestPage: React.FC = () => {
 
       <Checkboxes />
       <ToggleSwitch />
+      <TableMajor />
     </div>
   );
 };
