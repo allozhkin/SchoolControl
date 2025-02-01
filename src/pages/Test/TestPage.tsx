@@ -6,6 +6,7 @@ import LoginForm from '../../components/loginForm/LoginForm';
 import CalendarComponent from '../../components/Calendar/Calendar';
 import Checkboxes from '../../components/ui-kit/checkboxes/Checkboxes';
 import ToggleSwitch from '../../components/ui-kit/toggleSwitch/ToggleSwitch';
+import FilterClasses from '../../components/SelectClasses/FilterClasses';
 
 const TestPage: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -50,6 +51,7 @@ const TestPage: React.FC = () => {
       <CalendarComponent />
     
 
+      <FilterClasses />
       <Checkboxes />
       <ToggleSwitch />
     </div>
