@@ -24,6 +24,7 @@
     display: flex;
     justify-content: center;
     @include typography-h2;
+    font-weight: 400;
   }
 
   &__logo{
