@@ -17,47 +17,40 @@ const LoginForm = () => {
     console.log(data);
   }
 
-  // const emailError = formState.errors.email?.message;
-  // const passError = formState.errors.password?.message;
-  const errorMsg = (formState.errors.email?.message || formState.errors.password?.message)
+  const emailError = formState.errors.email?.message;
+  const passError = formState.errors.password?.message;
+
   
   return (
-      <>
-        <div className={styles.login__wrapper}>
-          {/* <Icon id="Union" width={48} height={48} /> */}
-          <div className={styles.login_container}>
-            {/* <h1 className={styles.login__title}>SCHOOL CONTROL</h1> */}
-            <a className={styles.login__logo}><Icon id={'LogoSC'} width={36} height={15} /><span className={styles.login__logo_txt}>SCHOOL CONTROL</span></a>
+      <div className={styles.login__wrapper}>
+        <a className={styles.login__logo} href="#" ><Icon className={styles.login__icon}  id={'LogoSC'} width={36} height={15} /><span className={styles.login__txt}>SCHOOL CONTROL</span></a>
+        <div className={styles.login__container}>
+          <div className={styles.login__box}>
             <h2 className={styles.login__title}>Вход</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <input className={styles.login__input} type="email" placeholder="Логин" {...register (
-                'email', {
-                  // required: 'Введите логин',
-                  required: 'Заполните все поля',
-                  pattern: {
-                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                    // message: 'Invalid email address',
-                    message: 'Заполните все поля',
-                  },
-                }
-              )}/>
-              {/* {emailError && <p style={{color: 'tomato'}}>{emailError}</p>} */}
-              <input className={styles.login__input} type="password" placeholder="Пароль"{...register('password', {
-                  // required: 'Введите пароль',
-                  required: 'Заполните все поля',
-                  minLength: {
-                      value: 6,
-                      // message: 'Пароль должен содержать минимум 6 символов'
-                      message: 'Заполните все поля'
-                  }
-                })} />
-                {/* {passError && <p style={{color: 'tomato'}}>{passError}</p>} */}
-              <button className={styles.login__button}>Войти</button>
-              {errorMsg && <p className={styles.errorMsg}>{errorMsg}</p>}
+                  <input className={styles.login__input} type="email" placeholder="Логин" {...register (
+                    'email', {
+                      required: '*Заполните все поля',
+                      pattern: {
+                        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                        message: '*Заполните все поля',
+                      },
+                    }
+                  )}/>
+                  {emailError && <p className={styles.login__error}>{emailError}</p>}
+                  <input className={styles.login__input} type="password" placeholder="Пароль"{...register('password', {
+                      required: '*Заполните все поля',
+                      minLength: {
+                          value: 6,
+                          message: '*Заполните все поля'
+                      }
+                    })} />
+                    {passError && <p className={styles.login__error}>{passError}</p>}
+                  <button className={styles.login__button}>Войти</button>
             </form>
           </div>
         </div>
-      </>
+      </div>
   )
 }
 
