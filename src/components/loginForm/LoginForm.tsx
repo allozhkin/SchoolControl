@@ -28,7 +28,8 @@ const LoginForm = () => {
           <div className={styles.login__box}>
             <h2 className={styles.login__title}>Вход</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                  <input className={styles.login__input} type="email" placeholder="Логин" {...register (
+              <div className={styles.login__input_box}>
+                  <input id='login' className={styles.login__input} type="email" required {...register (
                     'email', {
                       required: '*Заполните все поля',
                       pattern: {
@@ -37,16 +38,21 @@ const LoginForm = () => {
                       },
                     }
                   )}/>
+                  <label className={styles.login__label} htmlFor='login'>Логин</label>
                   {emailError && <p className={styles.login__error}>{emailError}</p>}
-                  <input className={styles.login__input} type="password" placeholder="Пароль"{...register('password', {
+              </div>
+              <div className={styles.login__input_box}>
+                  <input id='pass' className={styles.login__input} type="password" required {...register('password', {
                       required: '*Заполните все поля',
                       minLength: {
                           value: 6,
                           message: '*Заполните все поля'
                       }
                     })} />
+                    <label className={styles.login__label} htmlFor='pass'>Пароль</label>
                     {passError && <p className={styles.login__error}>{passError}</p>}
-                  <button className={styles.login__button}>Войти</button>
+              </div>
+              <button className={styles.login__button}>Войти</button>
             </form>
           </div>
         </div>
