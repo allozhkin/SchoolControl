@@ -1,4 +1,4 @@
-@mixin typography($font-family, $font-size, $line-height, $font-weight, $letter-spacing) {
+@mixin typography($font-family,$font-size, $line-height, $font-weight,$letter-spacing) {
   font-family: $font-family;
   font-size: $font-size;
   line-height: $line-height;
@@ -7,22 +7,19 @@
 }
 
 @mixin typography-h1 {
-  @include typography("Roboto", 48px, 56px, 600, 0.3px);
+    @include typography('Roboto', 48px, 56px, 600, 0.3px)
 }
 
 @mixin typography-h2 {
-  @include typography("Roboto", 42px, 46px, 700, 0.4px);
+    @include typography('Roboto', 42px, 46px, 700, 0.4px)
 }
 
 @mixin typography-h3 {
-  @include typography("Roboto", 28px, 32px, 700, 0.4px);
+    @include typography('Roboto', 28px, 32px, 700, 0.4px)
 }
 
 @mixin typography-headline-bold {
-  @include typography("Monrope", 20px, 24px, 600, 0.4px);
-}
-@mixin typography-body-regular{
-  @include typography("Monrope", 16px, 22px, 400, 0px);
+    @include typography('Monrope', 20px, 24px, 600, 0.4px)
 }
 
 @mixin typography-sf_pro_display {
