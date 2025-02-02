@@ -6,7 +6,7 @@ import LoginForm from '../../components/loginForm/LoginForm';
 import CalendarComponent from '../../components/Calendar/Calendar';
 import Checkboxes from '../../components/ui-kit/checkboxes/Checkboxes';
 import ToggleSwitch from '../../components/ui-kit/toggleSwitch/ToggleSwitch';
-import FilterClasses from '../../components/SelectClasses/FilterClasses';
+import FilterClasses from '../../components/FilterClasses/FilterClasses';
 
 const TestPage: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -17,13 +17,14 @@ const TestPage: React.FC = () => {
   return (
     <div className={styles.test__block}>
       <h2 className={styles.test__title}>Test Page </h2>
-      <button onClick={handleOpen} className={styles.test__btn_modal}>
+      <FilterClasses />
+      {/* <button onClick={handleOpen} className={styles.test__btn_modal}>
         Modal open btn
-      </button>
+      </button> */}
 
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+      {/* <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <h2>Modal content</h2>
-      </Modal>
+      </Modal> */}
 
       <span>id="iconHelp"</span>
       <Icon id="iconHelp" width={24} height={24} className={styles.test__icon} />
@@ -47,13 +48,12 @@ const TestPage: React.FC = () => {
       <Icon id="reports" width={24} height={24} className={styles.test__icon} />
       <span>id="Exit"</span>
       <Icon id="Exit" width={24} height={24} className={styles.test__icon} />
-      <LoginForm />
-      <CalendarComponent />
+      {/* <LoginForm />
+      <CalendarComponent /> */}
     
 
-      <FilterClasses />
-      <Checkboxes />
-      <ToggleSwitch />
+      {/* <Checkboxes />
+      <ToggleSwitch /> */}
     </div>
   );
 };
