@@ -5,8 +5,8 @@ import Icon from '../../components/ui-kit/Icon/Icon';
 import LoginForm from '../../components/loginForm/LoginForm';
 import CalendarComponent from '../../components/Calendar/Calendar';
 import Checkboxes from '../../components/ui-kit/checkboxes/Checkboxes';
-import ToggleSwitch from '../../components/ui-kit/toggleSwitch';
-import TableMajor from '../../components/tableMajor/TableMajor';
+import ToggleSwitch from '../../components/ui-kit/toggleSwitch/ToggleSwitch';
+import FilterClasses from '../../components/FilterClasses/FilterClasses';
 
 const TestPage: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -47,9 +47,7 @@ const TestPage: React.FC = () => {
       <Icon id="reports" width={24} height={24} className={styles.test__icon} />
       <span>id="Exit"</span>
       <Icon id="Exit" width={24} height={24} className={styles.test__icon} />
-      <span>id="icon"</span>
-      {/* не отбражается */}
-      <Icon id="icon" width={24} height={24} className={styles.test__icon} />
+      <FilterClasses />
       <LoginForm />
       <CalendarComponent />
     
