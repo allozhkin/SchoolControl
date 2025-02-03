@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import styles from './login-form.module.scss';
+import Icon from '../ui-kit/Icon/Icon';
 // import Icon from '../ui-kit/Icon/Icon'; 
 
 interface AuthForm {
@@ -16,46 +17,46 @@ const LoginForm = () => {
     console.log(data);
   }
 
-  // const emailError = formState.errors.email?.message;
-  // const passError = formState.errors.password?.message;
-  const errorMsg = (formState.errors.email?.message || formState.errors.password?.message)
+  const emailError = formState.errors.email?.message;
+  const passError = formState.errors.password?.message;
+
   
   return (
-      <>
-        <div className={styles.login__wrapper}>
-          {/* <Icon id="Union" width={48} height={48} /> */}
-          <div className={styles.login_container}>
-            {/* <h1 className={styles.login__title}>SCHOOL CONTROL</h1> */}
+      <div className={styles.login__wrapper}>
+        <a className={styles.login__logo} href="#" ><Icon className={styles.login__icon}  id={'LogoSC'} width={36} height={15} /><span className={styles.login__txt}>SCHOOL CONTROL</span></a>
+        <div className={styles.login__container}>
+          <div className={styles.login__box}>
             <h2 className={styles.login__title}>Вход</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <input className={styles.login__input} type="email" placeholder="Логин" {...register (
-                'email', {
-                  // required: 'Введите логин',
-                  required: 'Заполните все поля',
-                  pattern: {
-                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                    // message: 'Invalid email address',
-                    message: 'Заполните все поля',
-                  },
-                }
-              )}/>
-              {/* {emailError && <p style={{color: 'tomato'}}>{emailError}</p>} */}
-              <input className={styles.login__input} type="password" placeholder="Пароль"{...register('password', {
-                  // required: 'Введите пароль',
-                  required: 'Заполните все поля',
-                  minLength: {
-                      value: 6,
-                      // message: 'Пароль должен содержать минимум 6 символов'
-                      message: 'Заполните все поля'
-                  }
-                })} />
-                {/* {passError && <p style={{color: 'tomato'}}>{passError}</p>} */}
+              <div className={styles.login__input_box}>
+                  <input id='login' className={`${styles.login__input} ${emailError ? styles.login__input_error : ''}`} type="email" required {...register (
+                    'email', {
+                      required: '*Заполните все поля',
+                      pattern: {
+                        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                        message: '*Заполните все поля',
+                      },
+                    }
+                  )}/>
+                  <label className={styles.login__label} htmlFor='login'>Логин</label>
+                  {emailError && <p className={styles.login__error}>{emailError}</p>}
+              </div>
+              <div className={styles.login__input_box}>
+                  <input id='pass' className={`${styles.login__input} ${passError ? styles.login__input_error : ''}`} type="password" required {...register('password', {
+                      required: '*Заполните все поля',
+                      minLength: {
+                          value: 6,
+                          message: '*Заполните все поля'
+                      }
+                    })} />
+                    <label className={styles.login__label} htmlFor='pass'>Пароль</label>
+                    {passError && <p className={styles.login__error}>{passError}</p>}
+              </div>
               <button className={styles.login__button}>Войти</button>
-              {errorMsg && <p className={styles.errorMsg}>{errorMsg}</p>}
             </form>
           </div>
         </div>
-      </>
+      </div>
   )
 }
 

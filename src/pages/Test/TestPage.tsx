@@ -54,6 +54,7 @@ const TestPage: React.FC = () => {
 
       <Checkboxes />
       <ToggleSwitch />
+      <TableMajor />
     </div>
   );
 };
