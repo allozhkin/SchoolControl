@@ -80,4 +80,50 @@
     justify-content: space-between;
     gap: 10px;
   }
+
+  &__buttonReset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 40px;
+    // padding: 9px 14px;
+    border: 1px solid $accent-blue-1;
+    border-radius: 12px;
+    background-color: #fff;
+    color: $accent-blue-1;
+    cursor: pointer;
+  }
+
+  &__buttonReset:hover {
+    border: 1px solid #0B2FE1;
+    color: #0B2FE1;
+  }
+
+  &__buttonReset:active {
+    border: 1px solid $accent-blue-4;
+    color: $accent-blue-4;
+  }
+
+  &__buttonApply {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 40px;
+    // padding: 9px 14px;
+    border: none;
+    border-radius: 12px;
+    background-color: $accent-blue-1;
+    color: #FEFEFF;
+    cursor: pointer;
+  }
+
+  &__buttonApply:hover {
+    background-color: #0B2FE1;
+  }
+
+  &__buttonApply:active {
+    background-color: $accent-blue-4;
+  }
 }

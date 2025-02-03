@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './FilterClasses.module.scss';
-import BtnCheckbox from '../ui-kit/btnCheckbox/BtnCheckbox';
+// import BtnCheckbox from '../ui-kit/btnCheckbox/BtnCheckbox';
 
 interface ClassOptions {
   label: string;
@@ -121,8 +121,14 @@ const FilterClasses = () => {
             </div>
           )}
           <div className={styles.filter__buttons} >
-            <BtnCheckbox text="Сбросить" />
-            <BtnCheckbox text="Применить" />
+            <button className={styles.filter__buttonReset} type="submit">
+              Сбросить
+            </button>
+            <button className={styles.filter__buttonApply} type="submit">
+              Применить
+            </button>
+            {/* <BtnCheckbox text="Сбросить" />
+            <BtnCheckbox text="Применить" /> */}
           </div>
         </div>
       )}
