@@ -21,12 +21,36 @@
     color: #8D9299;
     cursor: pointer;
     transition: all .2s ease-in-out;
+
+    &:hover {
+      color: $primary-gray-4;
+      box-shadow: 0 4px 68px 0 #355ED933;
+    }
   }
 
-  &__select:hover {
+  &__select_open {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEFEFF;
+    border: 1px solid #C5DCEE;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    padding: 12px;
+    width: 100%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    // color: #8D9299;
     color: $primary-gray-4;
-    box-shadow: 0 4px 68px 0 #355ED933;
-  }
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    // &:hover {
+      // color: $primary-gray-4;
+      // box-shadow: 0 4px 68px 0 #355ED933;
+    // }
+  }  
 
   &__wrapper {
     display: flex;
@@ -34,19 +58,22 @@
     background-color: $primary-white-2;
     width: 100%;
     max-width: 314px;
+    // max-height: 530px;
     box-sizing: border-box;
     border: 1px solid #C5DCEE;
-    border-radius: 12px;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
     padding: 12px;
     position: absolute;
     z-index: 1000;
   }
-
+  
   &__search {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 12px;
   }
 
   &__searchInput {
@@ -66,19 +93,54 @@
   }
 
   &__allClasses {
-    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    // display: flex;
+    // justify-content: space-between;
+    // margin-bottom: 12px;
   }
 
-  &__gradeItem {
+  &__grades {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    // gap: 12px;
+  }
+
+  // &__gradeItem {
+  //   margin-bottom: 12px;
+  // }
+
+  &__label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 20px;
+
+    &_level_1 {
+      padding-left: 12px;  // 1 уровень вложенности
+    }
+
+    &_level_2 {
+      padding-left: 24px;  // 2 уровня вложенности
+    }
+
+    &_level_3 {
+      padding-left: 36px;  // 3 уровня вложенности
+    }
   }
+
+  // .filter__grades {
+  //   overflow: scroll;
+  // }
 
   &__buttons {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    margin-bottom: 10px;
   }
 
   &__buttonReset {
