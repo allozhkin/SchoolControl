@@ -48,8 +48,20 @@ const classOptions: ClassOptions[] = [
 
 const FilterClasses = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showClasses, setShowClasses] = useState(false);
+  const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
 
   const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleClasses = () => setShowClasses(!showClasses);
+  const toggleSection = (sectionKey: string) => {
+    // Если секция открыта, закроем ее и наоборот
+    const isOpen = openSections[sectionKey] || false;
+    // Обновим состояние секций
+    setOpenSections({
+        ...openSections,
+        [sectionKey]: !isOpen, // Инвертируем текущее состояние
+    });
+};
 
   return (
     <div className={styles.filter}>
@@ -79,25 +91,35 @@ const FilterClasses = () => {
           <div className={styles.filter__allClasses}>
             <label className={styles.filter__gradeItem}>
               Все классы
-              <input type="checkbox" />
+              <input 
+                type="checkbox" 
+                checked={showClasses}
+                onChange={toggleClasses}/>
             </label>
           </div>
-          <div>
-            {classOptions.map((grade) => (
-              <div key={grade.value}>
-                <label className={styles.filter__gradeItem}>
-                  {grade.label}
-                  <input type="checkbox" />
-                </label>
-                {grade.children?.map((child) => (
-                  <label className={styles.filter__gradeItem} key={child.value}>
-                    {child.label}
-                    <input type="checkbox" />
+          {showClasses && (
+            <div>
+              {classOptions.map((grade) => (
+                <div key={grade.value}>
+                  <label className={styles.filter__gradeItem}>
+                    {grade.label}
+                    <input type="checkbox" onClick={() => toggleSection(grade.value)}/>
                   </label>
-                ))}
-              </div>
-            ))}
-          </div>
+                  {openSections[grade.value] && (
+                    <div>
+                      {grade.children?.map((child) => (
+                        <label className={styles.filter__gradeItem} key={child.value}>
+                          {child.label}
+                          <input type="checkbox"/>
+                        </label>
+                      ))}
+                    </div>
+                  )}
+                  
+                </div>
+              ))}
+            </div>
+          )}
           <div className={styles.filter__buttons} >
             <BtnCheckbox text="Сбросить" />
             <BtnCheckbox text="Применить" />
