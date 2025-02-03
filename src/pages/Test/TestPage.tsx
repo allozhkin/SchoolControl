@@ -47,6 +47,9 @@ const TestPage: React.FC = () => {
       <Icon id="reports" width={24} height={24} className={styles.test__icon} />
       <span>id="Exit"</span>
       <Icon id="Exit" width={24} height={24} className={styles.test__icon} />
+      <span>id="icon"</span>
+      {/* не отбражается */}
+      <Icon id="icon" width={24} height={24} className={styles.test__icon} />
       <LoginForm />
       <CalendarComponent />
     

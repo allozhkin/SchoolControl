@@ -1,60 +1,100 @@
 @use '../../styles/mixins.scss' as *;
 @use '../../styles/color-palette.scss' as *;
-
 .login {
 
   &__wrapper {
     background: linear-gradient(180deg, #309BE8, #3035C9);
+    width: 100%;
+    // height: 100vh;
+  }
+
+  &__container {  
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo {
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
+    color: $primary-white-3;
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 29px;
+    margin-top: 100px;
+  }
+// Тут вопрос
+  &__icon {
+    fill: white;
   }
 
-  &__container {
-    width: 450px;
-    background: green;
+  &__txt {
+    margin-left: 8px;
   }
 
-  &__title{
-    width: 100%;
-    color: $primary-white-2;
+  &__box {
+    width: 504px;
+    background: $primary-white-3;
+    padding: 44px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-top: 181px;
+    margin-bottom: 301px;
+  }
+
+  &__title {
+    color: $accent-blue-1;
     @include typography-h2;
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 28px;
   }
 
-  &__text {
-    display: flex;
-    justify-content: center;
-    color: #4F4D54;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 16px;
-    letter-spacing: 0.3px;
+  &__input_box {
+    width: 504px;
+    position: relative;
   }
 
   &__input {
-    width: 100%;  
-    padding: 20px 5px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 16px;
+    margin: 20px 0;
+    border: 1px solid #C5DCEE;
     font-size: 16px;
     outline: 0;
     border-radius: 12px;
+    &_error{
+      border: 2px solid red;
+      background-color: #ffe6e6;
+    }
   }
 
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding-left: 16px;
+    transition: all .3s ease;
+  }
+
+
   &__button {
-    width: 103%;
+    width: 100%;
+    margin-top: 16px;
     padding: 20px;
     margin-top: 20px;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: -0.5px;
-    background-color: $accent-blue-4;
+    background-color: $accent-blue-1;
     color: #fff;
     border: none;
     border-radius: 18px;
@@ -62,15 +102,23 @@
     cursor: pointer;
   }
 
+  &__error{
+    width: 504px;
+    display: flex;
+    justify-content: end;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.5px;
+    color: red;
+    margin: 0;
+    padding: 0;
+  }
+
 }
 
-::placeholder {
-  color: $primary-gray-4;
+.login__input:focus ~ label, .login__input:valid ~ label {
+  top: 30%;
+  transform: translateY(-35%);
+  font-size: 10px;
 }
 
-.errorMsg {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22.5px;
-  color: red;
-}
