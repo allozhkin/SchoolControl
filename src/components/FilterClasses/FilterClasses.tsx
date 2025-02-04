@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { classOptions } from './constants';
 import styles from './FilterClasses.module.scss';
+import CheckboxWithLabel from '../ui-kit/checkboxWithLabel/CheckboxWithLabel';
 
 const FilterClasses = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,54 +52,40 @@ const FilterClasses = () => {
                 alt="Search Icon" />
             </div>
             <div className={styles.filter__allClasses}>
-              <label className={styles.filter__label}>
-                Все классы
-                <input
-                  className={styles.filter__checkbox_input}
-                  type="checkbox" 
-                  checked={showClasses}
-                  onChange={toggleClasses}
-                />
-                <span className={styles.filter__checkbox}></span>
-              </label>
+              <CheckboxWithLabel
+                label='Все классы'
+                checked={showClasses}
+                onChange={toggleClasses}
+              />
             </div>
             {showClasses && (
               <div className={styles.filter__grades}>
                 {classOptions.map((grade) => (
                   <div className={styles.filter__gradeItem} key={grade.value}>
-                    <label className={`${styles.filter__label} ${styles.filter__label_level_1}`}>
-                      {grade.label}
-                      <input 
-                        className={styles.filter__checkbox_input}
-                        type="checkbox" 
-                        onChange={() => toggleSection(grade.value)}
-                      />
-                      <span className={styles.filter__checkbox}></span>
-                    </label>
+                    <CheckboxWithLabel
+                      label={grade.label}
+                      onChange={() => toggleSection(grade.value)}
+                      className={styles.filter__label_level_1}
+                    />
                     {openSections[grade.value] && (
                       <div>
                         {grade.children?.map((child) => (
                           <div key={child.value}>
-                            <label className={`${styles.filter__label} ${styles.filter__label_level_2}`}>
-                              {child.label}
-                              <input 
-                                className={styles.filter__checkbox_input}
-                                type="checkbox" 
-                                onChange={() => toggleSection(child.value)}
-                              />
-                              <span className={styles.filter__checkbox}></span>
-                            </label>
+                            <CheckboxWithLabel
+                              label={child.label}
+                              onChange={() => toggleSection(child.value)}
+                              className={styles.filter__label_level_2}
+                            />
                             {openSections[child.value] && (
                               <div>
                                 {child.children?.map((subChild) => (
-                                  <label className={`${styles.filter__label} ${styles.filter__label_level_3}`} key={subChild.value}>
-                                    {subChild.label}
-                                    <input 
-                                      className={styles.filter__checkbox_input}
-                                      type="checkbox" 
+                                  <div key={subChild.value}>
+                                    <CheckboxWithLabel
+                                      label={subChild.label}
+                                      onChange={() => toggleSection(subChild.value)}
+                                      className={styles.filter__label_level_3}
                                     />
-                                    <span className={styles.filter__checkbox}></span>
-                                  </label>
+                                  </div>
                                 ))}
                               </div>
                             )}

@@ -112,16 +112,16 @@
     overflow-y: scroll;
     &::-webkit-scrollbar {
       width: 0; 
-  }
+    }
   }
 
   &__label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-    font-size: 14px;
-    line-height: 20px;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // margin-bottom: 12px;
+    // font-size: 14px;
+    // line-height: 20px;
 
     &_level_1 {
       padding-left: 12px;  // 1 уровень вложенности
@@ -136,29 +136,29 @@
     }
   }
 
-  &__checkbox_input {
-    display: none;
-  }
+  // &__checkbox_input {
+  //   display: none;
+  // }
 
-  &__checkbox_input:checked + &__checkbox::after {
-    content: '';
-    position: absolute;
-    width: 6px; 
-    height: 12px; 
-    border: solid #79BEFF; 
-    border-width: 0 2px 2px 0; 
-    transform: rotate(45deg); 
-    left: 5px; 
-  }
+  // &__checkbox_input:checked + &__checkbox::after {
+  //   content: '';
+  //   position: absolute;
+  //   width: 6px; 
+  //   height: 12px; 
+  //   border: solid #79BEFF; 
+  //   border-width: 0 2px 2px 0; 
+  //   transform: rotate(45deg); 
+  //   left: 5px; 
+  // }
 
-  &__checkbox {
-    width: 18px; 
-    height: 18px; 
-    border: 1px solid $primary-black-1; 
-    border-radius: 4px;
-    position: relative;
-    transition: background-color 0.3s, border-color 0.3s;
-  }
+  // &__checkbox {
+  //   width: 18px; 
+  //   height: 18px; 
+  //   border: 1px solid $primary-black-1; 
+  //   border-radius: 4px;
+  //   position: relative;
+  //   transition: background-color 0.3s, border-color 0.3s;
+  // }
 
   &__buttons {
     display: flex;
@@ -178,6 +178,7 @@
     background-color: #fff;
     color: $accent-blue-1;
     cursor: pointer;
+    transition: all .2s ease-in-out;
 
     &:hover {
       border: 1px solid #0B2FE1;
@@ -185,8 +186,8 @@
     }
 
     &:active {
-      border: 1px solid $accent-blue-4;
-      color: $accent-blue-4;
+      border: 1px solid #07165C;
+      color: #07165C;
     }
   }
 
@@ -201,13 +202,14 @@
     background-color: $accent-blue-1;
     color: #FEFEFF;
     cursor: pointer;
+    transition: all .2s ease-in-out;
 
     &:hover {
       background-color: #0B2FE1;
     }
 
     &:active {
-      background-color: $accent-blue-4;
+      background-color: #07165C;
     }
   }
 }
