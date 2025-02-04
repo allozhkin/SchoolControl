@@ -11,6 +11,7 @@ interface AuthForm {
 const LoginForm = () => {
   const { register, handleSubmit, formState } = useForm<AuthForm>({
     mode: 'onChange',
+    delayError: 2000,
   })
 
   const onSubmit = (data:any) => {

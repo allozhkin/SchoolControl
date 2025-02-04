@@ -1,11 +1,11 @@
 @use '../../styles/mixins.scss' as *;
 @use '../../styles/color-palette.scss' as *;
+
 .login {
 
   &__wrapper {
     background: linear-gradient(180deg, #309BE8, #3035C9);
     width: 100%;
-    // height: 100vh;
   }
 
   &__container {  
@@ -25,10 +25,7 @@
     font-weight: 700;
     line-height: 29px;
     margin-top: 100px;
-  }
-// Тут вопрос
-  &__icon {
-    fill: white;
+    color: white;
   }
 
   &__txt {
