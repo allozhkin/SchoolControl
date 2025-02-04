@@ -85,6 +85,13 @@
     }
   }
 
+  &__icon__error {
+      position: absolute;
+      right: 10px;
+      top: 37%;
+      transform: translateY(-50%);
+  }
+
   &__button {
     width: 100%;
     margin-top: 16px;

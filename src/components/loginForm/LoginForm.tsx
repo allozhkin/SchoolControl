@@ -1,7 +1,6 @@
 import { useForm } from 'react-hook-form';
 import styles from './login-form.module.scss';
 import Icon from '../ui-kit/Icon/Icon';
-// import Icon from '../ui-kit/Icon/Icon'; 
 
 interface AuthForm {
   'email': string,
@@ -39,6 +38,7 @@ const LoginForm = () => {
                       },
                     }
                   )}/>
+                    {emailError && (<Icon id="icon" className={styles.login__icon__error} width={24} height={24} />)}
                   <label className={styles.login__label} htmlFor='login'>Логин</label>
                   {emailError && <p className={styles.login__error}>{emailError}</p>}
               </div>
@@ -50,6 +50,7 @@ const LoginForm = () => {
                           message: '*Заполните все поля'
                       }
                     })} />
+                    {passError && (<Icon id="icon" className={styles.login__icon__error} width={24} height={24} />)}
                     <label className={styles.login__label} htmlFor='pass'>Пароль</label>
                     {passError && <p className={styles.login__error}>{passError}</p>}
               </div>
