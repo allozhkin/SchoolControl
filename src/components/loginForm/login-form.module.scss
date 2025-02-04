@@ -54,32 +54,40 @@
 
   &__input_box {
     width: 504px;
+    margin: 20px 0;
     position: relative;
+    & label {
+      position: absolute;
+      left: 16px;
+      top: 15px;
+      transition: .3s ease-in-out;
+    }
   }
 
   &__input {
     width: 100%;
     box-sizing: border-box;
     padding: 20px 16px;
-    margin: 20px 0;
+    
     border: 1px solid #C5DCEE;
     font-size: 16px;
     outline: 0;
     border-radius: 12px;
+    // backdrop-filter: blur(2px);
     &_error{
       border: 2px solid red;
-      background-color: #ffe6e6;
+      // background-color: #ffe6e6;
     }
   }
 
-  &__label {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    padding-left: 16px;
-    transition: all .3s ease;
-  }
+  // &__label {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 0;
+  //   transform: translateY(-50%);
+  //   padding-left: 16px;
+  //   transition: all .3s ease;
+  // }
 
 
   &__button {
@@ -113,9 +121,4 @@
 
 }
 
-.login__input:focus ~ label, .login__input:valid ~ label {
-  top: 30%;
-  transform: translateY(-35%);
-  font-size: 10px;
-}
 
