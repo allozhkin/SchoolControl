@@ -28,6 +28,11 @@
     }
   }
 
+  &__selectIcon {
+    width: 18px;
+    height: 18px;
+  }
+
   &__select_open {
     display: flex;
     justify-content: space-between;
@@ -102,7 +107,12 @@
   &__grades {
     display: flex;
     flex-direction: column;
-    margin-bottom: 12px;
+    max-height: 320px;
+    overflow-y: hidden; // Скрываем полосу прокрутки
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0; 
+  }
   }
 
   &__label {

@@ -48,7 +48,7 @@ export const classOptions: ClassOptions[] = [
     ],
   },
   {
-    label: 'Средняя школа',
+    label: 'Средние классы',
     value: 'middle',
     children: [
       {
@@ -99,7 +99,7 @@ export const classOptions: ClassOptions[] = [
     ],
   },
   {
-    label: 'Старшая школа',
+    label: 'Старшие классы',
     value: 'high',
     children: [
       {
