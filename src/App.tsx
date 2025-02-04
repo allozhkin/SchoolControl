@@ -6,18 +6,20 @@ import Home from './pages/Home/Home';
 import TestPage from './pages/Test/TestPage';
 import NavBar from './components/navBar/NavBar';
 import './App.scss';
+import Calendar from './components/Calendar/Calendar';
 
 const App: React.FC = () => (
   <Provider store={store}>
     <Router>
-      <header>
+      {/* <header>
        <NavBar />
-      </header>
+      </header> */}
 
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/testPage" element={<TestPage />} />
+          <Route path="/Calendar" element={<Calendar />} />
         </Routes>
       </main>
     </Router>
