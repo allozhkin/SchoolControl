@@ -2,69 +2,6 @@
 @use "../../styles/mixins.scss" as *;
 
 .filter {
-  position: relative;
-  width: 100%;
-  max-width: 314px;
-  
-  &__select {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FEFEFF;
-    border: 1px solid #C5DCEE;
-    border-radius: 12px;
-    padding: 12px;
-    width: 100%;
-    font-family: 'Manrope', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: #8D9299;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-
-    &:hover {
-      color: $primary-gray-4;
-      box-shadow: 0 4px 68px 0 #355ED933;
-    }
-  }
-
-  &__selectIcon {
-    width: 18px;
-    height: 18px;
-  }
-
-  &__select_open {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FEFEFF;
-    border: 1px solid #C5DCEE;
-    border-bottom: none;
-    border-radius: 12px 12px 0 0;
-    padding: 12px;
-    width: 100%;
-    font-family: 'Manrope', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: $primary-gray-4;
-    cursor: pointer;
-    transition: all .2s ease-in-out;    
-  }  
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    background-color: $primary-white-2;
-    width: 100%;
-    max-width: 314px;
-    box-sizing: border-box;
-    border: 1px solid #C5DCEE;
-    border-top: none;
-    border-radius: 0 0 12px 12px;
-    padding: 12px;
-    position: absolute;
-    z-index: 1000;
-  }
   
   &__search {
     position: relative;
