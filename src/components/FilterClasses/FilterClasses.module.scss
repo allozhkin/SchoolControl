@@ -41,15 +41,9 @@
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    // color: #8D9299;
     color: $primary-gray-4;
     cursor: pointer;
-    transition: all .2s ease-in-out;
-
-    // &:hover {
-      // color: $primary-gray-4;
-      // box-shadow: 0 4px 68px 0 #355ED933;
-    // }
+    transition: all .2s ease-in-out;    
   }  
 
   &__wrapper {
@@ -58,7 +52,6 @@
     background-color: $primary-white-2;
     width: 100%;
     max-width: 314px;
-    // max-height: 530px;
     box-sizing: border-box;
     border: 1px solid #C5DCEE;
     border-top: none;
@@ -81,8 +74,17 @@
     max-width: 290px;
     border: 1px solid #C5DCEE;
     border-radius: 12px;
-    // padding-right: 30px;
     padding: 13px 8px 13px 16px;
+
+    &::placeholder {
+      color: $primary-gray-4;
+      opacity: 0.6;
+    }
+
+    &:focus {
+      border-color: $background-switcher; 
+      outline: none;
+    }
   }
 
   &__searchIcon {
@@ -95,21 +97,13 @@
   &__allClasses {
     font-size: 14px;
     line-height: 20px;
-    // display: flex;
-    // justify-content: space-between;
-    // margin-bottom: 12px;
   }
 
   &__grades {
     display: flex;
     flex-direction: column;
     margin-bottom: 12px;
-    // gap: 12px;
   }
-
-  // &__gradeItem {
-  //   margin-bottom: 12px;
-  // }
 
   &__label {
     display: flex;
@@ -132,9 +126,29 @@
     }
   }
 
-  // .filter__grades {
-  //   overflow: scroll;
-  // }
+  &__checkbox_input {
+    display: none;
+  }
+
+  &__checkbox_input:checked + &__checkbox::after {
+    content: '';
+    position: absolute;
+    width: 6px; 
+    height: 12px; 
+    border: solid #79BEFF; 
+    border-width: 0 2px 2px 0; 
+    transform: rotate(45deg); 
+    left: 5px; 
+  }
+
+  &__checkbox {
+    width: 18px; 
+    height: 18px; 
+    border: 1px solid $primary-black-1; 
+    border-radius: 4px;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
 
   &__buttons {
     display: flex;
@@ -149,22 +163,21 @@
     justify-content: center;
     width: 140px;
     height: 40px;
-    // padding: 9px 14px;
     border: 1px solid $accent-blue-1;
     border-radius: 12px;
     background-color: #fff;
     color: $accent-blue-1;
     cursor: pointer;
-  }
 
-  &__buttonReset:hover {
-    border: 1px solid #0B2FE1;
-    color: #0B2FE1;
-  }
+    &:hover {
+      border: 1px solid #0B2FE1;
+      color: #0B2FE1;
+    }
 
-  &__buttonReset:active {
-    border: 1px solid $accent-blue-4;
-    color: $accent-blue-4;
+    &:active {
+      border: 1px solid $accent-blue-4;
+      color: $accent-blue-4;
+    }
   }
 
   &__buttonApply {
@@ -173,19 +186,18 @@
     justify-content: center;
     width: 140px;
     height: 40px;
-    // padding: 9px 14px;
     border: none;
     border-radius: 12px;
     background-color: $accent-blue-1;
     color: #FEFEFF;
     cursor: pointer;
-  }
 
-  &__buttonApply:hover {
-    background-color: #0B2FE1;
-  }
+    &:hover {
+      background-color: #0B2FE1;
+    }
 
-  &__buttonApply:active {
-    background-color: $accent-blue-4;
+    &:active {
+      background-color: $accent-blue-4;
+    }
   }
 }

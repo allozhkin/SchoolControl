@@ -53,10 +53,13 @@ const FilterClasses = () => {
             <div className={styles.filter__allClasses}>
               <label className={styles.filter__label}>
                 Все классы
-                <input 
+                <input
+                  className={styles.filter__checkbox_input}
                   type="checkbox" 
                   checked={showClasses}
-                  onChange={toggleClasses}/>
+                  onChange={toggleClasses}
+                />
+                <span className={styles.filter__checkbox}></span>
               </label>
             </div>
             {showClasses && (
@@ -65,7 +68,12 @@ const FilterClasses = () => {
                   <div className={styles.filter__gradeItem} key={grade.value}>
                     <label className={`${styles.filter__label} ${styles.filter__label_level_1}`}>
                       {grade.label}
-                      <input type="checkbox" onClick={() => toggleSection(grade.value)}/>
+                      <input 
+                        className={styles.filter__checkbox_input}
+                        type="checkbox" 
+                        onChange={() => toggleSection(grade.value)}
+                      />
+                      <span className={styles.filter__checkbox}></span>
                     </label>
                     {openSections[grade.value] && (
                       <div>
@@ -73,14 +81,23 @@ const FilterClasses = () => {
                           <div key={child.value}>
                             <label className={`${styles.filter__label} ${styles.filter__label_level_2}`}>
                               {child.label}
-                              <input type="checkbox" onClick={() => toggleSection(child.value)}/>
+                              <input 
+                                className={styles.filter__checkbox_input}
+                                type="checkbox" 
+                                onChange={() => toggleSection(child.value)}
+                              />
+                              <span className={styles.filter__checkbox}></span>
                             </label>
                             {openSections[child.value] && (
                               <div>
                                 {child.children?.map((subChild) => (
                                   <label className={`${styles.filter__label} ${styles.filter__label_level_3}`} key={subChild.value}>
                                     {subChild.label}
-                                    <input type="checkbox" />
+                                    <input 
+                                      className={styles.filter__checkbox_input}
+                                      type="checkbox" 
+                                    />
+                                    <span className={styles.filter__checkbox}></span>
                                   </label>
                                 ))}
                               </div>
@@ -104,43 +121,9 @@ const FilterClasses = () => {
           </div>
         </>
       }
-      
-      
-      
     </div>
   )
 }
 
 export default FilterClasses
 
-// const classOptions: ClassOptions[] = [
-//   {
-//     label: 'Начальная школа',
-//     value: 'elementary',
-//     children: [
-//       { label: '1-ые классы', value: '1st' },
-//       { label: '2-ые классы', value: '2nd' },
-//       { label: '3-и классы', value: '3rd' },
-//       { label: '4-ые классы', value: '4th' },
-//     ],
-//   },
-//   {
-//     label: 'Средние классы',
-//     value: 'middle',
-//     children: [
-//       { label: '5-ые классы', value: '5th' },
-//       { label: '6-ые классы', value: '6th' },
-//       { label: '7-ые классы', value: '7th' },
-//       { label: '8-ые классы', value: '8th' },
-//       { label: '9-ые классы', value: '9th' },
-//     ],
-//   },
-//   {
-//     label: 'Старшие классы',
-//     value: 'high',
-//     children: [
-//       { label: '10-ые классы', value: '10th' },
-//       { label: '11-ые классы', value: '11th' },
-//     ],
-//   },
-// ];
