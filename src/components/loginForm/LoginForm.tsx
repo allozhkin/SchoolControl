@@ -30,7 +30,7 @@ const LoginForm = () => {
             <h2 className={styles.login__title}>Вход</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className={styles.login__input_box}>
-                  <input id='login' className={`${styles.login__input} ${emailError ? styles.login__input_error : ''}`} type="email" required {...register (
+                  <input id='login' className={`${styles.login__input} ${emailError ? styles.login__input_error : ''}`} type="text" required {...register (
                     'email', {
                       required: '*Заполните все поля',
                       pattern: {

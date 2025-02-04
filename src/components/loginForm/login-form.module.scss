@@ -68,27 +68,22 @@
     width: 100%;
     box-sizing: border-box;
     padding: 20px 16px;
-    
     border: 1px solid #C5DCEE;
     font-size: 16px;
     outline: 0;
     border-radius: 12px;
-    // backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    &:focus ~ label {
+      top: 2px;
+    } 
+    &:valid ~ label {
+      top: 2px;
+    } 
     &_error{
       border: 2px solid red;
-      // background-color: #ffe6e6;
+      background-color: #ffe6e6;
     }
   }
-
-  // &__label {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 0;
-  //   transform: translateY(-50%);
-  //   padding-left: 16px;
-  //   transition: all .3s ease;
-  // }
-
 
   &__button {
     width: 100%;
@@ -118,7 +113,6 @@
     margin: 0;
     padding: 0;
   }
-
 }
 
 
