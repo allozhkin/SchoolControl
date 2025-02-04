@@ -1,0 +1,74 @@
+@use "./../../styles/color-palette.scss" as *;
+@use "./../../styles/mixins.scss" as *;
+
+.table {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #fff;
+    max-width: 670px;
+    max-height: 650px;
+
+    &__row {
+        list-style-type: none;
+        display: flex;
+        border-bottom: 1px solid #c5dcee;
+        &_title {
+            flex: 1;
+            border-right: 1px solid #c5dcee;
+            padding: 13px;
+            @include typography-body-regular;
+            text-align: center;
+        }
+    }
+
+    &__header {
+        display: flex;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        background-color: $major-frame-color;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        &_title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            list-style-type: none;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: 1px solid #dde1e6;
+            @include typography-sf_pro_display;
+        }
+    }
+}
+.table_body {
+    width: 100%;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 8px; /* Ширина скролла */
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #efefef; /* Цвет фона трека */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $major-frame-color; /* Цвет ползунка */
+        border-radius: 8px; /* Скругление ползунка */
+
+        &:hover {
+            background: #dec7ff; /* Цвет ползунка при наведении */
+        }
+    }
+}
