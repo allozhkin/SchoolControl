@@ -1,0 +1,71 @@
+/* Стилидля основного контейнера календаря */
+:global(.react-calendar) {
+  width: 360px;
+  height: 524px;
+  background: white;
+  border: 1px solid #C5DCEE;
+  border-radius: 28px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #404664;
+}
+
+:global(.react-calendar__month-view__weekdays abbr) {
+  text-decoration: none;
+  font-family: 'Manrope';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+:global(.react-calendar__navigation) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  /* Расставляем элементы по краям */
+  align-items: center;
+  width: 100%;  /* Чтобы навигация занимала всю ширину */
+  height: 0;
+}
+
+:global(.react-calendar__navigation__label) {
+  order: -1;
+  flex-grow: 1;
+  text-align: left;
+}
+
+:global(.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button ) {
+  order: 1;
+  min-width: 40px;
+  text-align: center; /* Центрируем стрелки */
+}
+
+:global(.react-calendar__navigation button) {
+  min-width: 40px;
+  color: #5E5E63;
+  padding-left: 10px;  /* Убираем отступы внутри кнопок */
+  background: none;  /* Убираем фоновый цвет, если он есть */
+  border: none;  /* Убираем границы */
+  font-size: 14px;  /* Настроим размер шрифта для стрелок */
+  line-height: 20px;
+}
+
+:global(.react-calendar__month-view__days) {
+  font-weight: 400;
+  font-style: 16px;
+  line-height: 22px;
+  font-family: 'Manrope';
+}
+
+
+
+/* Стили для активного дня */
+:global(.react-calendar__tile--active) {
+  background: #007bff !important;
+  color: white !important;
+  border-radius: 5px;
+}
+
