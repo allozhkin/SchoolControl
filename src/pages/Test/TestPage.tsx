@@ -3,11 +3,13 @@ import styles from './test.module.scss';
 import Modal from '../../components/modal/Modal';
 import Icon from '../../components/ui-kit/Icon/Icon';
 import LoginForm from '../../components/loginForm/LoginForm';
-import CalendarComponent from '../../components/Calendar/Calendar';
 import Checkboxes from '../../components/ui-kit/checkboxes/Checkboxes';
-import ToggleSwitch from '../../components/ui-kit/toggleSwitch/ToggleSwitch';
-import FilterClasses from '../../components/FilterClasses/FilterClasses';
+import ToggleSwitch from '../../components/ui-kit/toggleSwitch';
 import TableMajor from '../../components/tableMajor/TableMajor';
+import ChartDonut from '../../components/chartDonut/ChartDonut';
+import FilterClasses from '../../components/FilterClasses/FilterClasses';
+import Calendar from '../../components/Calendar/Calendar';
+
 
 const TestPage: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -21,6 +23,9 @@ const TestPage: React.FC = () => {
       <button onClick={handleOpen} className={styles.test__btn_modal}>
         Modal open btn
       </button>
+      <div className={styles.test__chart_container}>
+        <ChartDonut />
+      </div>
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <h2>Modal content</h2>
@@ -48,13 +53,12 @@ const TestPage: React.FC = () => {
       <Icon id="reports" width={24} height={24} className={styles.test__icon} />
       <span>id="Exit"</span>
       <Icon id="Exit" width={24} height={24} className={styles.test__icon} />
+      <Icon id='LogoSC' width={36} height={15}  className={styles.test__icon}/>
       <span>id="icon"</span>
       <Icon id="icon" width={24} height={24} className={styles.test__icon} />
-      <FilterClasses />
       <LoginForm />
-      <CalendarComponent />
-    
-
+      <Calendar/>
+      <FilterClasses />
       <Checkboxes />
       <ToggleSwitch />
       <TableMajor />

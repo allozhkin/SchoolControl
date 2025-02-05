@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { classOptions } from './constants';
 import styles from './FilterClasses.module.scss';
 import CheckboxWithLabel from '../ui-kit/checkboxWithLabel/CheckboxWithLabel';
-import PopupContainer from '../ui-kit/popupContainer/popupContainer';
+import PopupContainer from '../ui-kit/popupContainer/PopupContainer';
 
-const FilterClasses = () => {
+const FilterClasses: React.FC = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [showClasses, setShowClasses] = useState(false);
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
