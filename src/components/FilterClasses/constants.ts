@@ -2,7 +2,6 @@ interface ClassOptions {
   label: string;
   value: string;
   children?: ClassOptions[];
-  
 }
 
 export const classOptions: ClassOptions[] = [

@@ -10,6 +10,7 @@ import ChartDonut from '../../components/chartDonut/ChartDonut';
 import FilterClasses from '../../components/FilterClasses/FilterClasses';
 import Calendar from '../../components/Calendar/Calendar';
 
+
 const TestPage: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -53,6 +54,8 @@ const TestPage: React.FC = () => {
       <span>id="Exit"</span>
       <Icon id="Exit" width={24} height={24} className={styles.test__icon} />
       <Icon id='LogoSC' width={36} height={15}  className={styles.test__icon}/>
+      <span>id="icon"</span>
+      <Icon id="icon" width={24} height={24} className={styles.test__icon} />
       <LoginForm />
       <Calendar/>
       <FilterClasses />

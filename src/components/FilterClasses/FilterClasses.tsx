@@ -5,6 +5,7 @@ import CheckboxWithLabel from '../ui-kit/checkboxWithLabel/CheckboxWithLabel';
 import PopupContainer from '../ui-kit/popupContainer/PopupContainer';
 
 const FilterClasses: React.FC = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [showClasses, setShowClasses] = useState(false);
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
