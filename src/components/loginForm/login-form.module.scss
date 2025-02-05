@@ -1,11 +1,11 @@
 @use '../../styles/mixins.scss' as *;
 @use '../../styles/color-palette.scss' as *;
+
 .login {
 
   &__wrapper {
     background: linear-gradient(180deg, #309BE8, #3035C9);
     width: 100%;
-    // height: 100vh;
   }
 
   &__container {  
@@ -25,10 +25,7 @@
     font-weight: 700;
     line-height: 29px;
     margin-top: 100px;
-  }
-// Тут вопрос
-  &__icon {
-    fill: white;
+    color: white;
   }
 
   &__txt {
@@ -57,33 +54,43 @@
 
   &__input_box {
     width: 504px;
+    margin: 20px 0;
     position: relative;
+    & label {
+      position: absolute;
+      left: 16px;
+      top: 15px;
+      transition: .3s ease-in-out;
+    }
   }
 
   &__input {
     width: 100%;
     box-sizing: border-box;
     padding: 20px 16px;
-    margin: 20px 0;
     border: 1px solid #C5DCEE;
     font-size: 16px;
     outline: 0;
     border-radius: 12px;
+    backdrop-filter: blur(2px);
+    &:focus ~ label {
+      top: 2px;
+    } 
+    &:valid ~ label {
+      top: 2px;
+    } 
     &_error{
       border: 2px solid red;
       background-color: #ffe6e6;
     }
   }
 
-  &__label {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    padding-left: 16px;
-    transition: all .3s ease;
+  &__icon__error {
+      position: absolute;
+      right: 10px;
+      top: 37%;
+      transform: translateY(-50%);
   }
-
 
   &__button {
     width: 100%;
@@ -113,12 +120,6 @@
     margin: 0;
     padding: 0;
   }
-
 }
 
-.login__input:focus ~ label, .login__input:valid ~ label {
-  top: 30%;
-  transform: translateY(-35%);
-  font-size: 10px;
-}
 

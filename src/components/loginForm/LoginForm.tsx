@@ -1,7 +1,6 @@
 import { useForm } from 'react-hook-form';
 import styles from './login-form.module.scss';
 import Icon from '../ui-kit/Icon/Icon';
-// import Icon from '../ui-kit/Icon/Icon'; 
 
 interface AuthForm {
   'email': string,
@@ -11,6 +10,7 @@ interface AuthForm {
 const LoginForm = () => {
   const { register, handleSubmit, formState } = useForm<AuthForm>({
     mode: 'onChange',
+    delayError: 2000,
   })
 
   const onSubmit = (data:any) => {
@@ -29,7 +29,7 @@ const LoginForm = () => {
             <h2 className={styles.login__title}>Вход</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className={styles.login__input_box}>
-                  <input id='login' className={`${styles.login__input} ${emailError ? styles.login__input_error : ''}`} type="email" required {...register (
+                  <input id='login' className={`${styles.login__input} ${emailError ? styles.login__input_error : ''}`} type="text" required {...register (
                     'email', {
                       required: '*Заполните все поля',
                       pattern: {
@@ -38,6 +38,7 @@ const LoginForm = () => {
                       },
                     }
                   )}/>
+                    {emailError && (<Icon id="icon" className={styles.login__icon__error} width={24} height={24} />)}
                   <label className={styles.login__label} htmlFor='login'>Логин</label>
                   {emailError && <p className={styles.login__error}>{emailError}</p>}
               </div>
@@ -49,6 +50,7 @@ const LoginForm = () => {
                           message: '*Заполните все поля'
                       }
                     })} />
+                    {passError && (<Icon id="icon" className={styles.login__icon__error} width={24} height={24} />)}
                     <label className={styles.login__label} htmlFor='pass'>Пароль</label>
                     {passError && <p className={styles.login__error}>{passError}</p>}
               </div>
