@@ -6,8 +6,8 @@
     flex-direction: column;
     border-radius: 20px;
     background-color: #fff;
-    max-width: 670px;
-    max-height: 650px;
+    height: 72vh ;
+    border-radius: 20px;
 
     &__row {
         list-style-type: none;
@@ -17,8 +17,9 @@
             flex: 1;
             border-right: 1px solid #c5dcee;
             padding: 13px;
-            @include typography-body-regular;
+           // @include typography-body-regular;
             text-align: center;
+            overflow: hidden;
         }
     }
 
@@ -27,7 +28,7 @@
         text-align: center;
         padding: 0;
         margin: 0;
-        background-color: $major-frame-color;
+        background-color: $primary-blue-5;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
 
@@ -46,7 +47,6 @@
 }
 .table_body {
     width: 100%;
-
     position: relative;
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@
         border-radius: 8px; /* Скругление ползунка */
 
         &:hover {
-            background: #dec7ff; /* Цвет ползунка при наведении */
+            background: $primary-blue-3; /* Цвет ползунка при наведении */
         }
     }
 }

@@ -1,12 +1,15 @@
 import React from 'react';
 import Icon from '../ui-kit/Icon/Icon';
-import { DataRow } from './DataRow';
+import { DataRow, ITableProps } from './types';
 import { tableData } from './tableData';
 import styles from './TableMajor.module.scss';
 
-const TableMajor: React.FC = () => {
+const TableMajor: React.FC<ITableProps> = ({className}) => {
   return (
-    <div className={styles.table}>
+    <div className={`${styles.table} ${className}`}>
+      
+
+      <ul className={styles.table_body}>
       <ul className={styles.table__header}>
         <li className={styles.table__header_title}>Класс</li>
         <li className={styles.table__header_title}>Статус</li>
@@ -14,10 +17,8 @@ const TableMajor: React.FC = () => {
         <li className={styles.table__header_title}>Количество отсутствующих</li>
         <li className={styles.table__header_title}>Карантинный статус</li>
       </ul>
-
-      <ul className={styles.table_body}>
-        {tableData.map((row: DataRow) => (
-          <li className={styles.table__row} key={row.class}>
+        {tableData.map((row: DataRow, index) => (
+          <li className={styles.table__row} key={index}>
             <span className={styles.table__row_title}>{row.class}</span>
             <span className={styles.table__row_title}>{row.status}</span>
             <span className={styles.table__row_title}>{row.percentLeft}</span>

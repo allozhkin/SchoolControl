@@ -6,6 +6,8 @@ import Home from './pages/Home/Home';
 import TestPage from './pages/Test/TestPage';
 import NavBar from './components/navBar/NavBar';
 import './App.scss';
+import Greetings from './pages/Greetings/Greetings';
+import AdminPage from './pages/AdminPage/AdminPage';
 
 const App: React.FC = () => (
   <Provider store={store}>
@@ -18,6 +20,8 @@ const App: React.FC = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/testPage" element={<TestPage />} />
+          <Route path="/greetings" element={<Greetings title='Мария Мария Мария' />} />
+          <Route path="/admin" element={<AdminPage chartTitle='Статистика отсутствующих в школе '/>} />
         </Routes>
       </main>
     </Router>
