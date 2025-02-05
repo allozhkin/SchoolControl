@@ -7,14 +7,15 @@ import TestPage from './pages/Test/TestPage';
 import './App.scss';
 import Greetings from './pages/Greetings/Greetings';
 import AdminPage from './pages/AdminPage/AdminPage';
+import NavBar from './components/navBar/NavBar';
 
 
 const App: React.FC = () => (
   <Provider store={store}>
     <Router>
-      {/* <header>
+       <header>
        <NavBar />
-      </header> */}
+      </header>
 
       <main>
         <Routes>
