@@ -5,7 +5,7 @@ import styles from './checkboxWithLabel.module.scss';
 interface CheckboxWithLabelProps {
   label: string;
   checked?: boolean;
-  onChange?: () => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
 }
 const CheckboxWithLabel: React.FC<CheckboxWithLabelProps> = ({ label, checked, onChange, className }) => {

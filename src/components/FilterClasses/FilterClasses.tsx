@@ -9,6 +9,8 @@ const FilterClasses: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showClasses, setShowClasses] = useState(false);
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
+  const [inputValue, setInputValue] = useState('');
+  const [selectedClasses, setSelectedClasses] = useState<string[]>([]);  
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleClasses = () => setShowClasses(!showClasses);
@@ -20,15 +22,31 @@ const FilterClasses: React.FC = () => {
         ...openSections,
         [sectionKey]: !isOpen, // Инвертируем текущее состояние
     });
-};
+  };
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleCheckboxChange = (label: string, checked: boolean) => {
+    if (checked) { // Если чекбокс стоит, добавляем елемент в массив
+      setSelectedClasses((prev) => [...prev, label]);
+    } else { // Если чекбокс снят, удаляем элемент из массива
+      setSelectedClasses((prev) => prev.filter((className) => className !== label));
+    }
+  };
 
   return (
-    <PopupContainer isOpen={isOpen} name='Выберите классы' onClick={toggleMenu}>
+    <PopupContainer 
+      isOpen={isOpen} 
+      name={selectedClasses.length > 0 ? selectedClasses.join(', ') : 'Выберите классы'} 
+      onClick={toggleMenu}>
       <div className={styles.filter__search}>
         <input 
           className={styles.filter__searchInput}
           type="text"
           placeholder="Поиск"
+          onChange={handleSearchChange}
         />
         <img 
           className={styles.filter__searchIcon} 
@@ -48,7 +66,10 @@ const FilterClasses: React.FC = () => {
             <div className={styles.filter__gradeItem} key={grade.value}>
               <CheckboxWithLabel
                 label={grade.label}
-                onChange={() => toggleSection(grade.value)}
+                onChange={(e) => {
+                  toggleSection(grade.value);
+                  handleCheckboxChange(grade.label, e.target.checked);
+                }}
                 className={styles.filter__label_level_1}
               />
               {openSections[grade.value] && (
@@ -57,7 +78,10 @@ const FilterClasses: React.FC = () => {
                     <div key={child.value}>
                       <CheckboxWithLabel
                         label={child.label}
-                        onChange={() => toggleSection(child.value)}
+                        onChange={(e) => {
+                          toggleSection(child.value)
+                          handleCheckboxChange(child.label, e.target.checked);
+                        }}
                         className={styles.filter__label_level_2}
                       />
                       {openSections[child.value] && (
@@ -66,7 +90,10 @@ const FilterClasses: React.FC = () => {
                             <div key={subChild.value}>
                               <CheckboxWithLabel
                                 label={subChild.label}
-                                onChange={() => toggleSection(subChild.value)}
+                                onChange={(e) => {
+                                  toggleSection(subChild.value);
+                                  handleCheckboxChange(subChild.label, e.target.checked)
+                                }}
                                 className={styles.filter__label_level_3}
                               />
                             </div>

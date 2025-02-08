@@ -9,24 +9,23 @@ interface PopupContainerProps {
 }
 
 const PopupContainer: React.FC<PopupContainerProps> = ({ isOpen, name, onClick, children }) => {
+  const buttonClasses = isOpen ? styles.popup__select_open : styles.popup__select;
 
-  const dropdownButton = (isOpen: boolean) => (
-    <button 
-      className={isOpen ? styles.popup__select_open : styles.popup__select} 
-      onClick={onClick}
-    >
-      {name}
+  return (
+    <div className={styles.popup}>
+      <button 
+        className={buttonClasses} 
+        onClick={onClick}
+      >
+      <div className={styles.popup__text}>
+        {name}
+      </div>
       <img 
         className={styles.popup__selectIcon}
         src={isOpen ? '/icons/triangleUp.svg' : '/icons/triangleDown.svg'}
         alt='Dropdown Triangle' 
       />
-    </button>
-  )
-
-  return (
-    <div className={styles.popup}>
-      {dropdownButton(isOpen)}
+      </button>
       {isOpen && (
         <div className={styles.popup__wrapper}>
           {children}
