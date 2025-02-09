@@ -34,12 +34,19 @@ const FilterClasses: React.FC = () => {
     }
   };
 
-  const filteredClassOptions = classOptions.filter((grade) => {
+  const filteredClassOptions = classOptions.filter((grade) => { // Доработать
     return (
       grade.label.toLowerCase().includes(inputValue.toLowerCase()) ||
       (grade.children && grade.children.some((child) => child.label.toLowerCase().includes(inputValue.toLowerCase())))
     );
   });
+
+  const isClassSelected = (label: string) => selectedClasses.includes(label);
+
+  // const getName = () =>
+  //   !isOpen && (selectedClasses.length > 0 || inputValue)
+  //     ? `${selectedClasses.join(', ')}${inputValue}`
+  //     : 'Выберите классы';  
 
   const resetFilters = () => {
     setShowClasses(false);
@@ -57,6 +64,7 @@ const FilterClasses: React.FC = () => {
         <input 
           className={styles.filter__searchInput}
           type="text"
+          value={inputValue}
           placeholder="Поиск"
           onChange={handleSearchChange}
         />
@@ -69,6 +77,7 @@ const FilterClasses: React.FC = () => {
       <div className={styles.filter__allClasses}>
         <CheckboxWithLabel
           label='Все классы'
+          checked={isClassSelected('Все классы')}
           onChange={(e) => handleCheckboxChange('Все классы', e.target.checked)}
           onLabelClick={() => setShowClasses(prev => !prev)}
         />
@@ -79,6 +88,7 @@ const FilterClasses: React.FC = () => {
             <div className={styles.filter__gradeItem} key={grade.value}>
               <CheckboxWithLabel
                 label={grade.label}
+                checked={isClassSelected(grade.label)}
                 onLabelClick={() => toggleSection(grade.value)}
                 onChange={(e) => {handleCheckboxChange(grade.label, e.target.checked)}}
                 className={styles.filter__label_level_1}
@@ -89,6 +99,7 @@ const FilterClasses: React.FC = () => {
                     <div key={child.value}>
                       <CheckboxWithLabel
                         label={child.label}
+                        checked={isClassSelected(child.label)}
                         onLabelClick={() => toggleSection(child.value)}
                         onChange={(e) => {handleCheckboxChange(child.label, e.target.checked)}}
                         className={styles.filter__label_level_2}
@@ -99,6 +110,7 @@ const FilterClasses: React.FC = () => {
                             <div key={subChild.value}>
                               <CheckboxWithLabel
                                 label={subChild.label}
+                                checked={isClassSelected(subChild.label)}
                                 onLabelClick={() => toggleSection(subChild.value)}
                                 onChange={(e) => {handleCheckboxChange(subChild.label, e.target.checked)}}
                                 className={styles.filter__label_level_3}
