@@ -13,7 +13,7 @@ const PopupContainer: React.FC<PopupContainerProps> = ({ isOpen, name, onClick, 
 
   return (
     <div className={styles.popup}>
-      <button 
+      <div 
         className={buttonClasses} 
         onClick={onClick}
       >
@@ -25,7 +25,7 @@ const PopupContainer: React.FC<PopupContainerProps> = ({ isOpen, name, onClick, 
         src={isOpen ? '/icons/triangleUp.svg' : '/icons/triangleDown.svg'}
         alt='Dropdown Triangle' 
       />
-      </button>
+      </div>
       {isOpen && (
         <div className={styles.popup__wrapper}>
           {children}
