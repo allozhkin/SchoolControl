@@ -9,6 +9,7 @@ import TableMajor from '../../components/tableMajor/TableMajor';
 import ChartDonut from '../../components/chartDonut/ChartDonut';
 import FilterClasses from '../../components/FilterClasses/FilterClasses';
 import Calendar from '../../components/Calendar/Calendar';
+import Button from '../../components/button/Button';
 
 
 const TestPage: React.FC = () => {
@@ -62,6 +63,11 @@ const TestPage: React.FC = () => {
       <Checkboxes />
       <ToggleSwitch />
       <TableMajor />
+      <Button
+        onClick={() => console.log('button clicked')}
+        text="Сформировать отчёт"
+        
+      />
     </div>
   );
 };
