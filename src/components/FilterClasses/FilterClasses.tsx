@@ -63,16 +63,18 @@ const FilterClasses: React.FC = () => {
       <div className={styles.filter__search}>
         <input 
           className={styles.filter__searchInput}
-          type="text"
+          type="search"
           value={inputValue}
           placeholder="Поиск"
           onChange={handleSearchChange}
         />
-        <img 
-          className={styles.filter__searchIcon} 
-          src='/icons/searchInput.svg' 
-          alt="Search Icon" 
-        />
+        {!inputValue && (
+          <img 
+            className={styles.filter__searchIcon} 
+            src='/icons/searchInput.svg' 
+            alt="Search Icon" 
+          />
+        )}
       </div>
       <div className={styles.filter__allClasses}>
         <CheckboxWithLabel
