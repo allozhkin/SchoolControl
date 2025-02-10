@@ -22,6 +22,14 @@ function CalendarComponent() {
 
   return (
     <div className={styles.wrapper}>
+      <h3 className={styles.title}>Выберите дату</h3>
+        {/* Вывод выбранной даты */}
+        <p className={styles.selectedDate}>
+          {value instanceof Date 
+            ? value.toLocaleDateString('ru-RU', { weekday: 'short', day: 'numeric', month: 'long' })
+              .replace(/^./, (char) => char.toUpperCase()) 
+            : 'Не выбрано'}
+        </p>
       <Calendar
         onChange={onChange}
         value={value}
@@ -30,6 +38,11 @@ function CalendarComponent() {
         next2Label={null}
         navigationLabel={({ date }) => formatMonthYear(date)} // Форматирование месяца и года
       />
+      
+      <div className={styles.button__box}>
+        <button className={styles.button__calendar}>Закрыть</button>
+        <button className={styles.button__calendar}>ОК</button>
+      </div>
     </div>
   );
 }
