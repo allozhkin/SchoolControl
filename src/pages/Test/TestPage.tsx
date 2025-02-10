@@ -10,6 +10,7 @@ import ChartDonut from '../../components/chartDonut/ChartDonut';
 import FilterClasses from '../../components/FilterClasses/FilterClasses';
 import Calendar from '../../components/Calendar/Calendar';
 import Button from '../../components/button/Button';
+import Notification from '../../components/notification/Notification';
 
 
 const TestPage: React.FC = () => {
@@ -68,6 +69,7 @@ const TestPage: React.FC = () => {
         text="Сформировать отчёт"
         
       />
+      <Notification title='Новый пользователь добавлен' description='Внесенные Вами данные сохранены. Пароль был отправлен на почту  ' mail='ivanova@mail.ru' />
     </div>
   );
 };

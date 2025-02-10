@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  text: string;
+  text: string | JSX.Element;
   children?: React.ReactNode;
   className?: string;
 }
