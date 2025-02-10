@@ -47,6 +47,7 @@
             @include typography-sf_pro_display;
             &:hover {
                 background: #9db5d8;
+                cursor: pointer;
             }
         }
     }
