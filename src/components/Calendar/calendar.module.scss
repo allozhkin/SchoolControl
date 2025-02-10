@@ -111,10 +111,18 @@
 
 :global(.react-calendar__month-view__days) {
   font-weight: 400;
-  font-style: 16px;
+  font-size: 16px;
   line-height: 22px;
   font-family: 'Manrope';
+  color: $primary-black-1;
+
 }
+// :global(.react-calendar__tile, .react-calendar__month-view__days__day, .react-calendar__month-view__days__day--neighboringMonth abbr) {
+//   font-weight: 400;
+//   font-style: 16px;
+//   line-height: 22px;
+//   font-family: 'Manrope';
+// }
 
 
 
