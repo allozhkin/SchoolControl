@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CheckboxWithLabel from '../ui-kit/checkboxWithLabel/CheckboxWithLabel';
 import PopupContainer from '../ui-kit/popupContainer/PopupContainer';
-import { classOptions } from './constants';
+import { classOptions, filterOptions } from './constants';
 import styles from './FilterClasses.module.scss';
 
 const FilterClasses: React.FC = () => {
@@ -34,12 +34,7 @@ const FilterClasses: React.FC = () => {
     }
   };
 
-  const filteredClassOptions = classOptions.filter((grade) => { // Доработать
-    return (
-      grade.label.toLowerCase().includes(inputValue.toLowerCase()) ||
-      (grade.children && grade.children.some((child) => child.label.toLowerCase().includes(inputValue.toLowerCase())))
-    );
-  });
+  const filteredClassOptions = filterOptions(classOptions, inputValue);
 
   const isClassSelected = (label: string) => selectedClasses.includes(label);
 
