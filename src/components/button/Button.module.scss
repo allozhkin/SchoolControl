@@ -1,0 +1,17 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/color-palette.scss" as *;
+
+.buttonReport {
+    width: 342px;
+    height: 56px;
+    padding: 20px 22px;
+    border-radius: 12px;
+    background-color: $accent-blue-1;
+    color: $primary-white-3;
+    transition: opacity 0.2s ease-in;
+    cursor: pointer;
+    &:hover {
+        background-color: $accent-blue-2;
+        opacity: 0.8;
+    }
+}

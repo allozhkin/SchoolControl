@@ -46,6 +46,12 @@
 @mixin typography-Title2-Bold {
   @include typography("Manrope", 22px, 28px, 700, 0.4px)
 }
+@mixin typography-subTitle-regular {
+  @include typography("Manrope", 14px, 20px, 400, -0.5px)
+}
+@mixin typography-subTitle-bold {
+  @include typography("Manrope", 15px, 20px, 700, -0.5px)
+}
 @mixin authPage-bg-gradient {
   background: $primary-blue-gradient;
   display: flex;
