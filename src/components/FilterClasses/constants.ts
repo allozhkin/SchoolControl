@@ -4,6 +4,21 @@ interface ClassOptions {
   children?: ClassOptions[];
 }
 
+export const filterOptions = (options: ClassOptions[], searchValue: string): ClassOptions[] => {
+    return options.reduce<ClassOptions[]>((acc, option) => {
+      // Фильтруем детей рекурсивно
+      const filteredChildren = option.children ? filterOptions(option.children, searchValue) : undefined;
+      // Если текущий элемент или его дети соответствуют поиску, добавляем его в аккумулятор
+      if ( 
+        option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
+        (filteredChildren && filteredChildren.length > 0)
+      ) {
+        acc.push({ ...option, children: filteredChildren });
+      }
+      return acc;
+    }, []);
+  };
+
 export const classOptions: ClassOptions[] = [
   {
     label: 'Начальная школа',

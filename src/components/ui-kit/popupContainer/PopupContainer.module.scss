@@ -6,26 +6,33 @@
   width: 100%;
   max-width: 314px;
   
-  &__select {
+  &__select, &__select_open {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #FEFEFF;
     border: 1px solid #C5DCEE;
-    border-radius: 12px;
     padding: 12px;
     width: 100%;
-    font-family: 'Manrope', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: #8D9299;
+    color: $primary-gray-4;
     cursor: pointer;
     transition: all .2s ease-in-out;
+  }
+
+  &__select {
+    opacity: 0.6;
+    border-radius: 12px;
 
     &:hover {
-      color: $primary-gray-4;
+      opacity: 1;
       box-shadow: 0 4px 68px 0 #355ED933;
     }
+  }
+
+  &__select_open {
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    opacity: 1;
   }
 
   &__selectIcon {
@@ -33,23 +40,15 @@
     height: 18px;
   }
 
-  &__select_open {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FEFEFF;
-    border: 1px solid #C5DCEE;
-    border-bottom: none;
-    border-radius: 12px 12px 0 0;
-    padding: 12px;
+  &__text {
     width: 100%;
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: $primary-gray-4;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-  }  
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 
   &__wrapper {
     display: flex;
