@@ -1,16 +1,72 @@
-/* Стилидля основного контейнера календаря */
-:global(.react-calendar) {
+@use '../../styles/color-palette.scss' as *;
+
+.wrapper {
   width: 360px;
-  height: 524px;
   background: white;
   border: 1px solid #C5DCEE;
   border-radius: 28px;
-  padding: 16px;
+  padding: 52px 16px 16px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #404664;
+  position: relative;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: 'Manrope';
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: $primary-gray-4;
+  margin-bottom: 26px;
+}
+
+.button__box {
+  padding-top: 8px;
+  margin-left: -22px;
+  gap: 28px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.button__calendar {
+  font-family: 'Manrope';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  color: $accent-blue-1;
+  cursor: pointer;
+}
+.selectedDate {
+  font-family: 'Manrope';
+  font-size: 28px;
+  line-height: 34px;
+  color: $primary-black-1;
+  align-self: flex-start;
+  margin-top: 36px; // Добавляем отступ от title
+}
+
+
+/* Стилидля основного контейнера календаря */
+:global(.react-calendar) {
+  width: 360px;
+  background: white;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #404664;
+  margin-top: 20px;
 }
 
 :global(.react-calendar__month-view__weekdays abbr) {
@@ -55,10 +111,18 @@
 
 :global(.react-calendar__month-view__days) {
   font-weight: 400;
-  font-style: 16px;
+  font-size: 16px;
   line-height: 22px;
   font-family: 'Manrope';
+  color: $primary-black-1;
+
 }
+// :global(.react-calendar__tile, .react-calendar__month-view__days__day, .react-calendar__month-view__days__day--neighboringMonth abbr) {
+//   font-weight: 400;
+//   font-style: 16px;
+//   line-height: 22px;
+//   font-family: 'Manrope';
+// }
 
 
 
