@@ -1,4 +1,4 @@
-import { DataRow } from './DataRow';
+import { DataRow } from './types';
 
 export const tableData: DataRow[] = [
   {

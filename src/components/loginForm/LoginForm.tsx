@@ -9,13 +9,18 @@ interface AuthForm {
 }
 
 const LoginForm = () => {
-  const { register, handleSubmit, formState } = useForm<AuthForm>({
+  const { register, handleSubmit, formState, trigger } = useForm<AuthForm>({
     mode: 'onChange',
     delayError: 2000,
   })
 
+  const navigate = useNavigate();
+
   const onSubmit = (data:any) => {
     console.log(data);
+    setTimeout(() => {
+      navigate("/greetings");
+    }, 2000);
   }
 
   const emailError = formState.errors.email?.message;
@@ -28,14 +33,15 @@ const LoginForm = () => {
         <div className={styles.login__container}>
           <div className={styles.login__box}>
             <h2 className={styles.login__title}>Вход</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit, () => formState.isValid || trigger())} noValidate>
+
               <div className={styles.login__input_box}>
                   <input id='login' className={`${styles.login__input} ${emailError ? styles.login__input_error : ''}`} type="text" required {...register (
                     'email', {
                       required: '*Заполните все поля',
                       pattern: {
                         value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                        message: '*Заполните все поля',
+                        message: '*Некорректный email',
                       },
                     }
                   )}/>
@@ -48,7 +54,7 @@ const LoginForm = () => {
                       required: '*Заполните все поля',
                       minLength: {
                           value: 6,
-                          message: '*Заполните все поля'
+                          message: '*Минимум 6 символов'
                       }
                     })} />
                     {passError && (<Icon id="icon" className={styles.login__icon__error} width={24} height={24} />)}

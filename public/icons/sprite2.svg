@@ -38,17 +38,11 @@
   </g>
 </symbol>
 
- <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="iconUser">
-  <defs>
-    <clipPath id="clip610_8002">
-      <rect width="23" height="23" transform="translate(0.5 0.5)" fill="white" fill-opacity="0"></rect>
-    </clipPath>
-  </defs>
-  <rect width="23" height="23" transform="translate(0.5 0.5)" fill="white" fill-opacity="0"></rect>
-  <g clip-path="url(#clip610_8002)">
-    <path d="M8.53 12.06C8.65 12.01 8.78 11.99 8.92 11.98C9.05 11.98 9.18 12.01 9.31 12.06C9.43 12.11 9.54 12.19 9.64 12.29C9.73 12.38 9.8 12.49 9.85 12.62C9.9 12.74 9.92 12.88 9.92 13.01C9.92 13.14 9.89 13.27 9.83 13.4C9.78 13.52 9.7 13.63 9.6 13.72C9.5 13.81 9.39 13.88 9.26 13.93C8.59 14.19 8.02 14.65 7.62 15.24C7.21 15.83 7 16.54 7 17.25V19C7 19.26 7.1 19.51 7.29 19.7C7.48 19.89 7.73 20 8 20H16C16.26 20 16.51 19.89 16.7 19.7C16.89 19.51 17 19.26 17 19V17.35C17 16.61 16.77 15.88 16.35 15.27C15.93 14.66 15.33 14.19 14.64 13.93C14.51 13.89 14.4 13.82 14.3 13.73C14.2 13.64 14.12 13.53 14.06 13.41C14 13.29 13.97 13.15 13.97 13.02C13.96 12.89 13.98 12.75 14.03 12.63C14.08 12.5 14.15 12.39 14.25 12.29C14.34 12.2 14.45 12.12 14.57 12.07C14.69 12.01 14.83 11.99 14.96 11.98C15.09 11.98 15.23 12.01 15.35 12.06C16.42 12.47 17.35 13.19 18 14.14C18.65 15.08 19 16.2 19 17.35V19C19 19.79 18.68 20.55 18.12 21.12C17.55 21.68 16.79 22 16 22H8C7.2 22 6.44 21.68 5.87 21.12C5.31 20.55 5 19.79 5 19V17.25C5 16.14 5.33 15.04 5.96 14.12C6.59 13.19 7.49 12.48 8.53 12.06ZM12 2C13.06 2 14.07 2.42 14.82 3.17C15.57 3.92 16 4.93 16 6V8C16 9.06 15.57 10.07 14.82 10.82C14.07 11.57 13.06 12 12 12C10.93 12 9.92 11.57 9.17 10.82C8.42 10.07 8 9.06 8 8V6C8 4.93 8.42 3.92 9.17 3.17C9.92 2.42 10.93 2 12 2ZM12 4C11.46 4 10.96 4.21 10.58 4.58C10.21 4.96 10 5.46 10 6V8C10 8.53 10.21 9.03 10.58 9.41C10.96 9.78 11.46 10 12 10C12.53 10 13.03 9.78 13.41 9.41C13.78 9.03 14 8.53 14 8V6C14 5.46 13.78 4.96 13.41 4.58C13.03 4.21 12.53 4 12 4Z" fill="currentColor" fill-rule="nonzero"></path>
-  </g>
-</symbol>
+ 
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="iconUser">
+    <path d="M30 30V26C30 23.8783 29.2625 21.8434 27.9497 20.3431C26.637 18.8429 24.8565 18 23 18H9C7.14348 18 5.36301 18.8429 4.05025 20.3431C2.7375 21.8434 2 23.8783 2 26V30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M16 15C19.3137 15 22 12.0899 22 8.5C22 4.91015 19.3137 2 16 2C12.6863 2 10 4.91015 10 8.5C10 12.0899 12.6863 15 16 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
 
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" id="iconSettings">
     <defs>
@@ -125,12 +119,6 @@
    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="reports">
     <path d="M17.9629 2.59858C17.5868 2.21569 17.0727 2 16.536 2H7.75C7.02065 2 6.32118 2.295 5.80546 2.8201C5.28973 3.3452 5 4.05739 5 4.8V27.2C5 27.9426 5.28973 28.6548 5.80546 29.1799C6.32118 29.705 7.02065 30 7.75 30H24.25C24.9793 30 25.6788 29.705 26.1945 29.1799C26.7103 28.6548 27 27.9426 27 27.2V12.6179C27 12.0937 26.7942 11.5905 26.4269 11.2165L17.9629 2.59858Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
     <path d="M17.334 2.66699V12.0003H26.6673" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-  </symbol>
-
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon">
-    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#D70015" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-    <path d="M12 8V12" stroke="#D70015" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-    <path d="M12 16H12.01" stroke="#D70015" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
 
 </svg>
