@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import styles from './login-form.module.scss';
 import Icon from '../ui-kit/Icon/Icon';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface AuthForm {
   'email': string,
@@ -61,7 +61,7 @@ const LoginForm = () => {
                     <label className={styles.login__label} htmlFor='pass'>Пароль</label>
                     {passError && <p className={styles.login__error}>{passError}</p>}
               </div>
-              <Link className={styles.login__recovery}>Забыли пароль?</Link>
+              <Link className={styles.login__recovery} to={''}>Забыли пароль?</Link>
               <button className={styles.login__button}>Войти</button>
             </form>
           </div>
