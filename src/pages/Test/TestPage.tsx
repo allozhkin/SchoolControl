@@ -55,15 +55,19 @@ const TestPage: React.FC = () => {
       <Icon id="reports" width={24} height={24} className={styles.test__icon} />
       <span>id="Exit"</span>
       <Icon id="Exit" width={24} height={24} className={styles.test__icon} />
-      <Icon id='LogoSC' width={36} height={15}  className={styles.test__icon}/>
       <span>id="icon"</span>
       <Icon id="icon" width={24} height={24} className={styles.test__icon} />
+      <span>id="icon-error"</span>
+      <Icon id="icon-error" width={24} height={24} className={styles.test__icon} />
+      <span>id="triangleUp"</span>
+      <Icon id="triangleUp" width={24} height={24} className={styles.test__icon} />
+
       <LoginForm />
       <Calendar/>
       <FilterClasses />
       <Checkboxes />
       <ToggleSwitch />
-      <TableMajor />
+      
       <Button
         onClick={() => console.log('button clicked')}
         text="Сформировать отчёт"

@@ -7,16 +7,14 @@ import TestPage from './pages/Test/TestPage';
 import './App.scss';
 import Greetings from './pages/Greetings/Greetings';
 import AdminPage from './pages/AdminPage/AdminPage';
-import NavBar from './components/navBar/NavBar';
+import Header from './components/header/Header';
+
 
 
 const App: React.FC = () => (
   <Provider store={store}>
     <Router>
-       <header>
-       <NavBar />
-      </header>
-
+      <Header />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
