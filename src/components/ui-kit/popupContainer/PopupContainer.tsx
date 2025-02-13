@@ -9,12 +9,12 @@ interface PopupContainerProps {
 }
 
 const PopupContainer: React.FC<PopupContainerProps> = ({ isOpen, name, onClick, children }) => {
-  const buttonClasses = isOpen ? styles.popup__select_open : styles.popup__select;
+  const popupToggleStyles = isOpen ? styles.popup__select_open : styles.popup__select;
 
   return (
     <div className={styles.popup}>
       <div 
-        className={buttonClasses} 
+        className={popupToggleStyles} 
         onClick={onClick}
       >
       <div className={styles.popup__text}>
