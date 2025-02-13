@@ -7,6 +7,7 @@ const itemsArr = [
     { iconName: 'iconHome', text: 'Главная' },
     { iconName: 'reports', text: 'Отчеты' },
     { iconName: 'iconUser', text: 'Пользователи' },
+    { iconName: 'classList', text: 'Список классов' },
     { iconName: 'iconHelp', text: 'Помощь' }
 ];
 
