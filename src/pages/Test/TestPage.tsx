@@ -5,7 +5,6 @@ import Icon from '../../components/ui-kit/Icon/Icon';
 import LoginForm from '../../components/loginForm/LoginForm';
 import Checkboxes from '../../components/ui-kit/checkboxes/Checkboxes';
 import ToggleSwitch from '../../components/ui-kit/toggleSwitch';
-import TableMajor from '../../components/tableMajor/TableMajor';
 import ChartDonut from '../../components/chartDonut/ChartDonut';
 import FilterClasses from '../../components/FilterClasses/FilterClasses';
 import Calendar from '../../components/Calendar/Calendar';
