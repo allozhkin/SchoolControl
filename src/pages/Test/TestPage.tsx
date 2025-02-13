@@ -11,6 +11,7 @@ import FilterClasses from '../../components/FilterClasses/FilterClasses';
 import Calendar from '../../components/Calendar/Calendar';
 import Button from '../../components/button/Button';
 import Notification from '../../components/notification/Notification';
+import SelectReasons from '../../components/checkboxDropDown/CheckboxDropdown';
 
 
 const TestPage: React.FC = () => {
@@ -70,6 +71,8 @@ const TestPage: React.FC = () => {
         
       />
       <Notification title='Новый пользователь добавлен' description='Внесенные Вами данные сохранены. Пароль был отправлен на почту  ' mail='ivanova@mail.ru' />
+      <SelectReasons />
+
     </div>
   );
 };
