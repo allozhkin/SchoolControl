@@ -4,11 +4,14 @@ import Calendar from "../Calendar/Calendar";
 import FilterClasses from "../FilterClasses/FilterClasses";
 import styles from './header.module.scss';
 import NavBar from "../navBar/NavBar";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+    const navBarState = useSelector((state: any) => state.navBarState.value);
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
     return (
+        navBarState &&
         <header className={styles.header}>
             <div className={styles.header__container}>
                 <h2 className={styles.header__title}>
@@ -36,6 +39,7 @@ const Header = () => {
 }
 
 export default Header;
+
 
 
 
