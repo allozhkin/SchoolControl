@@ -17,7 +17,6 @@ const CheckboxDropDown: React.FC = () => {
   };
   const handleApply = () => {
     console.log('Применить:', selectedOptions);
-    setIsOpen(false);
   };
 
   const handleReset = () => {
