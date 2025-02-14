@@ -121,4 +121,16 @@
     <path d="M17.334 2.66699V12.0003H26.6673" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
 
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="left_button_cal">
+    <path d="M14 18L8 12L14 6L15.4 7.4L10.8 12L15.4 16.6L14 18Z" fill="#5E5E63"></path>
+  </symbol>
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="right">
+    <path d="M12.6 12L8 7.4L9.4 6L15.4 12L9.4 18L8 16.6L12.6 12Z" fill="#5E5E63"></path>
+  </symbol>
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="down_icon">
+    <path d="M9 11.25L5.25 7.5H12.75L9 11.25Z" fill="#5E5E63"></path>
+  </symbol>
+
 </svg>

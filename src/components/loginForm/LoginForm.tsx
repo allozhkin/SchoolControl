@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import styles from './login-form.module.scss';
 import Icon from '../ui-kit/Icon/Icon';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface AuthForm {
   'email': string,
