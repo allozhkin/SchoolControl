@@ -45,7 +45,7 @@ const LoginForm = () => {
                       },
                     }
                   )}/>
-                    {emailError && (<Icon id="icon" className={styles.login__icon__error} width={24} height={24} />)}
+                  {emailError && (<Icon id="error_icon" className={styles.login__icon__error} width={24} height={24} />)}
                   <label className={styles.login__label} htmlFor='login'>Логин</label>
                   {emailError && <p className={styles.login__error}>{emailError}</p>}
               </div>
@@ -57,7 +57,7 @@ const LoginForm = () => {
                           message: '*Минимум 6 символов'
                       }
                     })} />
-                    {passError && (<Icon id="icon" className={styles.login__icon__error} width={24} height={24} />)}
+                    {passError && (<Icon id="error_icon" className={styles.login__icon__error} width={24} height={24} />)}
                     <label className={styles.login__label} htmlFor='pass'>Пароль</label>
                     {passError && <p className={styles.login__error}>{passError}</p>}
               </div>
