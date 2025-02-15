@@ -121,4 +121,56 @@
     <path d="M17.334 2.66699V12.0003H26.6673" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
 
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" id="icon-error">
+    <defs>
+      <clipPath id="clip1742_18401">
+        <rect id="type=error" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"></rect>
+      </clipPath>
+    </defs>
+    <rect id="type=error" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"></rect>
+    <g clip-path="url(#clip1742_18401)">
+      <path id="Vector" d="M12 22C6.47 22 2 17.52 2 12C2 6.47 6.47 2 12 2C17.52 2 22 6.47 22 12C22 17.52 17.52 22 12 22Z" stroke="#D70015" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"></path>
+      <path id="Vector" d="M12 8L12 12" stroke="#D70015" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"></path>
+      <path id="Vector" d="M12 16L12 16" stroke="#D70015" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </symbol>
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="triangleUp">
+    <path d="M7 15L12 10L17 15H7Z" fill="#404664"></path>
+  </symbol>
+
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" id="classList">
+    <desc>Created with Pixso.</desc>
+    <defs>
+      <clipPath id="clip14_82436">
+        <rect id="icon" rx="0.000000" width="31.000000" height="31.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"></rect>
+      </clipPath>
+    </defs>
+    <rect id="icon" rx="0.000000" width="31.000000" height="31.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"></rect>
+    <g clip-path="url(#clip14_82436)">
+      <path id="Vector" d="M22 6L25 6C25.79 6 26.55 6.28 27.12 6.78C27.68 7.28 28 7.95 28 8.66L28 27.33C28 28.04 27.68 28.71 27.12 29.21C26.55 29.71 25.79 30 25 30L7 30C6.2 30 5.44 29.71 4.87 29.21C4.31 28.71 4 28.04 4 27.33L4 8.66C4 7.95 4.31 7.28 4.87 6.78C5.44 6.28 6.2 6 7 6L10 6" stroke="#404664" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"></path>
+      <path id="Vector" d="M19.99 2C20.73 2 21.33 2.59 21.33 3.33L21.33 6C21.33 6.73 20.73 7.33 19.99 7.33L11.99 7.33C11.26 7.33 10.66 6.73 10.66 6L10.66 3.33C10.66 2.59 11.26 2 11.99 2L19.99 2Z" stroke="#404664" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"></path>
+    </g>
+  </symbol>
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="left_button_cal">
+    <path d="M14 18L8 12L14 6L15.4 7.4L10.8 12L15.4 16.6L14 18Z" fill="#5E5E63"></path>
+  </symbol>
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="right">
+    <path d="M12.6 12L8 7.4L9.4 6L15.4 12L9.4 18L8 16.6L12.6 12Z" fill="#5E5E63"></path>
+  </symbol>
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="down_icon">
+    <path d="M9 11.25L5.25 7.5H12.75L9 11.25Z" fill="#5E5E63"></path>
+  </symbol>
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="error_icon">
+    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#D70015" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M12 8V12" stroke="#D70015" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M12 16H12.01" stroke="#D70015" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+
+
 </svg>

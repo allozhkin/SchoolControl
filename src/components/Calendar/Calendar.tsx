@@ -2,6 +2,7 @@ import { memo, useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'; 
 import styles from './calendar.module.scss';
+import Icon from '../ui-kit/Icon/Icon';
 
 type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
@@ -14,8 +15,8 @@ function CalendarComponent() {
       month: 'long',
       year: 'numeric',
     }).format(date);
-
-    return monthYear.replace(' г.', '').replace(/^./, (char) => char.toUpperCase());
+  
+    return `${monthYear.replace(' г.', '').replace(/^./, (char) => char.toUpperCase())}`;
   };
 
   return (
@@ -33,7 +34,14 @@ function CalendarComponent() {
         className={styles.calendar}
         prev2Label={null}
         next2Label={null}
-        navigationLabel={({ date }) => formatMonthYear(date)} 
+        prevLabel={<span className={styles.customArrow}><Icon id={'left_button_cal'} width={24} height={24} /></span>} 
+        nextLabel={<span className={styles.customArrow}><Icon id={'right'} width={24} height={24} /></span>} 
+        navigationLabel={({ date }) => (
+          <div className={styles.navigationLabel}>
+            <span>{formatMonthYear(date)}</span>
+            <Icon className={styles.icon__down} id={'down_icon'} width={18} height={18} />
+          </div>
+        )}
       />
       
       <div className={styles.button__box}>
