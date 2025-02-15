@@ -61,7 +61,7 @@ const LoginForm = () => {
                     <label className={styles.login__label} htmlFor='pass'>Пароль</label>
                     {passError && <p className={styles.login__error}>{passError}</p>}
               </div>
-            <Link to='/testPage' className={styles.login__recovery}>Забыли пароль?</Link>
+              <Link className={styles.login__recovery} to={''}>Забыли пароль?</Link>
               <button className={styles.login__button}>Войти</button>
             </form>
           </div>

@@ -4,7 +4,7 @@
 .popup {
   position: relative;
   width: 100%;
-  max-width: 314px;
+  max-width: 341px;
   
   &__select, &__select_open {
     display: flex;
@@ -55,7 +55,7 @@
     flex-direction: column;
     background-color: $primary-white-2;
     width: 100%;
-    max-width: 314px;
+    max-width: 341px;
     box-sizing: border-box;
     border: 1px solid #C5DCEE;
     border-top: none;
