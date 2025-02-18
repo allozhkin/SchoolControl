@@ -16,7 +16,7 @@ const UserFormChooseRole: React.FC = () => {
   };
 
   return (
-    <PopupContainer isOpen={isOpen} name={'Выбрать роль'} onClick={toggleMenu}>
+    <PopupContainer isOpen={isOpen} name={'Выберите роль'} onClick={toggleMenu}>
       <ul className={styles.menu__dropdown}>
         {roles.map((role) => (
           <li className={styles.menu__dropdown_item} key={role.value}>
