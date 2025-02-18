@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './AddUserForm.module.scss';
 import FilterClasses from '../FilterClasses/FilterClasses';
-import UserFormChooseRole from './UserFormChooseRole'
+import UserFormChooseRole from './UserFormChooseRole';
 
 interface FormData {
   lastName: string;
@@ -72,12 +72,11 @@ const Form: React.FC = () => {
     e.preventDefault();
     if (validate()) {
       console.log('Форма успешно отправлена:', formData);
-      // Здесь можно отправить данные на сервер
     }
   };
 
   return (
-    <form id='form' className={styles.form} onSubmit={handleSubmit}>
+    <form id="form" className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.form_item}>
         <input
           className={styles.form_item_input}
@@ -127,12 +126,9 @@ const Form: React.FC = () => {
         />
       </div>
       <div className={styles.form_selectors}>
-
-      <FilterClasses />
-      <UserFormChooseRole />
-    
+        <FilterClasses />
+        <UserFormChooseRole />
       </div>
-
     </form>
   );
 };
