@@ -11,7 +11,7 @@ import Calendar from '../../components/Calendar/Calendar';
 import Button from '../../components/button/Button';
 import Notification from '../../components/notification/Notification';
 import SelectReasons from '../../components/checkboxDropDown/CheckboxDropdown';
-
+import AddUserForm from '../../components/addUserForm/AddUserForm';
 
 const TestPage: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -34,21 +34,61 @@ const TestPage: React.FC = () => {
       </Modal>
 
       <span>id="iconHelp"</span>
-      <Icon id="iconHelp" width={24} height={24} className={styles.test__icon} />
+      <Icon
+        id="iconHelp"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
       <span>id="iconCalendar"</span>
-      <Icon id="iconCalendar" width={24} height={24} className={styles.test__icon} />
+      <Icon
+        id="iconCalendar"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
       <span>id="iconHome"</span>
-      <Icon id="iconHome" width={24} height={24} className={styles.test__icon} />
+      <Icon
+        id="iconHome"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
       <span>id="iconUser"</span>
-      <Icon id="iconUser" width={24} height={24} className={styles.test__icon} />
+      <Icon
+        id="iconUser"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
       <span>id="iconSettings"</span>
-      <Icon id="iconSettings" width={24} height={24} className={styles.test__icon} />
+      <Icon
+        id="iconSettings"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
       <span>id="iconStatistic"</span>
-      <Icon id="iconStatistic" width={24} height={24} className={styles.test__icon} />
+      <Icon
+        id="iconStatistic"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
       <span>id="iconClose"</span>
-      <Icon id="iconClose" width={24} height={24} className={styles.test__icon} />
+      <Icon
+        id="iconClose"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
       <span>id="iconDone"</span>
-      <Icon id="iconDone" width={24} height={24} className={styles.test__icon} />
+      <Icon
+        id="iconDone"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
       <span>id="Union"</span>
       <Icon id="Union" width={24} height={24} className={styles.test__icon} />
       <span>id="reports"</span>
@@ -58,24 +98,37 @@ const TestPage: React.FC = () => {
       <span>id="icon"</span>
       <Icon id="icon" width={24} height={24} className={styles.test__icon} />
       <span>id="icon-error"</span>
-      <Icon id="icon-error" width={24} height={24} className={styles.test__icon} />
+      <Icon
+        id="icon-error"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
       <span>id="triangleUp"</span>
-      <Icon id="triangleUp" width={24} height={24} className={styles.test__icon} />
+      <Icon
+        id="triangleUp"
+        width={24}
+        height={24}
+        className={styles.test__icon}
+      />
 
       <LoginForm />
-      <Calendar/>
+      <Calendar />
       <FilterClasses />
       <Checkboxes />
       <ToggleSwitch />
-      
+
       <Button
         onClick={() => console.log('button clicked')}
         text="Сформировать отчёт"
-        
       />
-      <Notification title='Новый пользователь добавлен' description='Внесенные Вами данные сохранены. Пароль был отправлен на почту  ' mail='ivanova@mail.ru' />
+      <Notification
+        title="Новый пользователь добавлен"
+        description="Внесенные Вами данные сохранены. Пароль был отправлен на почту  "
+        mail="ivanova@mail.ru"
+      />
       <SelectReasons />
-
+      <AddUserForm />
     </div>
   );
 };

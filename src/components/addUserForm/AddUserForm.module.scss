@@ -1,0 +1,158 @@
+@use "./../../styles/color-palette.scss" as *;
+@use "./../../styles/mixins.scss" as *;
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $primary-white-3;
+        border: 1px solid $accent-blue-4;
+        border-radius: 20px;
+        padding: 40px;
+        &_button {
+            width: 100%;
+            padding: 20px 22px;
+            border-radius: 12px;
+            background-color: $accent-blue-1;
+            color: $primary-white-3;
+            transition: opacity 0.2s ease-in;
+            cursor: pointer;
+            &:hover {
+                background-color: $accent-blue-2;
+                opacity: 0.8;
+            }
+        }
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    &__heading {
+        @include typography-title1-regular;
+        color: $accent-blue-1;
+        margin: 0;
+        padding: 0;
+    }
+    &_item {
+        display: flex;
+        gap: 16px;
+        &_input {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            background-color: $primary-white-3;
+            border: 1px solid $accent-blue-4;
+            padding: 16px;
+            color: black;
+        }
+    }
+    &_btn {
+        all: unset;
+        text-align: center;
+        width: 115px;
+        height: 30px;
+        border-radius: 12px;
+        margin-bottom: 4px;
+        background-color: $primary-white-3;
+        border: 1px solid $primary-white-3;
+        color: $accent-blue-1;
+        cursor: pointer;
+        transition: opacity 0.2s ease-in;
+        @include typography-caption1-regular;
+        &:hover {
+            border: 1px solid $accent-blue-1;
+        }
+        &:active {
+            position: relative;
+            top: 1px;
+        }
+    }
+    &__content {
+        display: flex;
+        width: 100%;
+        gap: 16px;
+        margin-bottom: 24px;
+        &_left {
+            display: flex;
+            flex-direction: column;
+            padding-right: 16px;
+            border-right: 1px solid $primary-gray-1;
+        }
+        &_right {
+            width: 100%;
+        }
+    }
+    &_selectors {
+        display: flex;
+        gap: 16px;
+    }
+}
+.buttonClose {
+    all: unset;
+    color: $primary-black-1;
+    cursor: pointer;
+    transition: fill 0.3s;
+    & svg {
+        color: grey;
+    }
+}
+.userCard__icon {
+    color: $accent-blue-1;
+    border-radius: 100px;
+    background-color: $primary-blue-6;
+    border-right: 1px solid $accent-blue-4;
+    margin-bottom: 20px;
+}
+.menu__dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    &_item {
+        list-style-type: none;
+        margin-bottom: 12px;
+    }
+    &_checkbox {
+        display: none;
+        @include typography-subTitle-regular;
+        &:checked + .newCheckbox {
+            background-color: $primary-white-3;
+            border-color: $primary-black-1; /* Цвет рамки при выборе */
+            &::after {
+                content: "";
+                position: absolute;
+                left: 5px;
+                top: 2px;
+                width: 6px;
+                height: 10px;
+                border: solid $primary-lavander-1;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+.newCheckbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.menu__dropdown li label {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
